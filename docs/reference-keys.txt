@@ -3,6 +3,7 @@ hallo-welt
 programme-und-fehler
 python-lernen
 daten
+iris-datensatz
 variablen
 datentypen
 zahlen
@@ -11,8 +12,6 @@ boolean
 zusammenfassung
 übungen
 skalenniveaus
-iris-datensatz
-datensatz
 übung
 von-nominal-zu-ordinal-xx-verschieben
 lineare-algebra
