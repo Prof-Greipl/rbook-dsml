@@ -1,4 +1,4 @@
-part-grundlagen
+part-teil-a-grundlagen
 python---quickstart
 hallo-welt
 programme-und-fehler
