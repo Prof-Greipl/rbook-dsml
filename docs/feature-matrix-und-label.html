@@ -4,14 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 5 Feature-Matrix und Label | Data Science &amp; Machine Learning</title>
+<title>Chapter 6 Feature-Matrix und Label | Data Science &amp; Machine Learning</title>
 <meta name="author" content="Dieter Greipl">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 5 Feature-Matrix und Label | Data Science &amp; Machine Learning">
+<meta property="og:title" content="Chapter 6 Feature-Matrix und Label | Data Science &amp; Machine Learning">
 <meta property="og:type" content="book">
 <meta property="og:image" content="/assets/x.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 5 Feature-Matrix und Label | Data Science &amp; Machine Learning">
+<meta name="twitter:title" content="Chapter 6 Feature-Matrix und Label | Data Science &amp; Machine Learning">
 <meta name="twitter:image" content="/assets/x.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -49,13 +49,13 @@
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Einführung</a></li>
 <li class="book-part">Grundlagen</li>
-<li><a class="" href="python---quickstart.html"><span class="header-section-number">1</span> Python - Quickstart</a></li>
-<li><a class="" href="daten.html"><span class="header-section-number">2</span> Daten</a></li>
-<li><a class="" href="lineare-algebra.html"><span class="header-section-number">3</span> Lineare Algebra</a></li>
-<li><a class="" href="numpy-arrays.html"><span class="header-section-number">4</span> Numpy (Arrays)</a></li>
-<li><a class="active" href="feature-matrix-und-label.html"><span class="header-section-number">5</span> Feature-Matrix und Label</a></li>
+<li><a class="" href="python---quickstart.html"><span class="header-section-number">2</span> Python - Quickstart</a></li>
+<li><a class="" href="daten.html"><span class="header-section-number">3</span> Daten</a></li>
+<li><a class="" href="lineare-algebra.html"><span class="header-section-number">4</span> Lineare Algebra</a></li>
+<li><a class="" href="numpy-arrays.html"><span class="header-section-number">5</span> Numpy-Arrays</a></li>
+<li><a class="active" href="feature-matrix-und-label.html"><span class="header-section-number">6</span> Feature-Matrix und Label</a></li>
 <li class="book-part">Latex Part</li>
-<li><a class="" href="chapter.html"><span class="header-section-number">6</span> Chapter</a></li>
+<li><a class="" href="chapter.html"><span class="header-section-number">7</span> Chapter</a></li>
 </ul>
 
         <div class="book-extra">
@@ -63,20 +63,20 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="feature-matrix-und-label" class="section level1" number="5">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="feature-matrix-und-label" class="section level1" number="6">
 <h1>
-<span class="header-section-number">5</span> Feature-Matrix und Label<a class="anchor" aria-label="anchor" href="#feature-matrix-und-label"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6</span> Feature-Matrix und Label<a class="anchor" aria-label="anchor" href="#feature-matrix-und-label"><i class="fas fa-link"></i></a>
 </h1>
 <p>In diesem kurzen Abschnitt definieren vorbereitend für den Abschnitt zu Machine-Learning wesentliche Begriffe und stellen einen Bezug zu den aus der linearen Algebra bekannten Konzepten von Vektor und Matrix her.</p>
-<div id="numerische-features-merkmal" class="section level2" number="5.1">
+<div id="numerische-features-merkmal" class="section level2" number="6.1">
 <h2>
-<span class="header-section-number">5.1</span> Numerische Features (Merkmal)<a class="anchor" aria-label="anchor" href="#numerische-features-merkmal"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.1</span> Numerische Features (Merkmal)<a class="anchor" aria-label="anchor" href="#numerische-features-merkmal"><i class="fas fa-link"></i></a>
 </h2>
 <p>Ein numerisches Feature ist ein <strong>Einzelaspekt </strong>einer Beobachtung oder Messung unserer Objekte, der sich als Zahl ausdrücken lässt. Ein Beispiel aus dem Iris-Datensatz ist “Länge der Petalums”. Die Anzahl der Features einer Problemstellung nennen notieren wir mit dem Buchstaben <span class="math inline">\(m\)</span>. Bei Iris: <span class="math inline">\(m = 4\)</span>.</p>
 </div>
-<div id="feature-vektor-merkmals-vektor" class="section level2" number="5.2">
+<div id="feature-vektor-merkmals-vektor" class="section level2" number="6.2">
 <h2>
-<span class="header-section-number">5.2</span> Feature-Vektor (Merkmals-Vektor)<a class="anchor" aria-label="anchor" href="#feature-vektor-merkmals-vektor"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.2</span> Feature-Vektor (Merkmals-Vektor)<a class="anchor" aria-label="anchor" href="#feature-vektor-merkmals-vektor"><i class="fas fa-link"></i></a>
 </h2>
 <p>Feature-Vektor ist eine Gruppierung der konkreten gemessenen Werte der Features als Vektor. Diese Gruppierung notiert man in der Regel als Zeilenvektor <span class="math inline">\(\bf{x} \in \mathbb{R}^{m}\)</span>. Ein Beispiel aus dem Iris-Datensatz ist der (erste) Feature-Vektor</p>
 <p><span class="math display">\[
@@ -93,9 +93,9 @@
 <li>Sample</li>
 </ul>
 </div>
-<div id="feature-matrix" class="section level2" number="5.3">
+<div id="feature-matrix" class="section level2" number="6.3">
 <h2>
-<span class="header-section-number">5.3</span> Feature-Matrix<a class="anchor" aria-label="anchor" href="#feature-matrix"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3</span> Feature-Matrix<a class="anchor" aria-label="anchor" href="#feature-matrix"><i class="fas fa-link"></i></a>
 </h2>
 <p>Eine Feature-Matrix besteht aus n Feature-Vektoren als Zeilen. Wir notieren die Feature-Matrix stets ebenfalls mit dem Symbol <span class="math inline">\(X\)</span>. Es ist:</p>
 <p><span class="math display">\[
@@ -103,22 +103,22 @@ X \in \mathbb{R}^{n \times m}
 \]</span></p>
 <p><strong>Beispiel</strong> <strong>(Iris)</strong>: Die 150 Feature-Vektoren aus Iris bilde die Feature-Matrix <span class="math inline">\(X \in \mathbb{R}^{150 \times 4}\)</span>.</p>
 </div>
-<div id="label" class="section level2" number="5.4">
+<div id="label" class="section level2" number="6.4">
 <h2>
-<span class="header-section-number">5.4</span> Label<a class="anchor" aria-label="anchor" href="#label"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.4</span> Label<a class="anchor" aria-label="anchor" href="#label"><i class="fas fa-link"></i></a>
 </h2>
 <p>Zu jedem Feature-Vektor interessiert uns eine “Antwort” oder ein “Ergebnis”. Zum Beispiel fragen wir danach, zu welcher Gattung die Lilie mit dem Feature-Vektor <span class="math inline">\(\textbf{x}= (5.1, 3.5, 1.4, 0.2 )\)</span> gehört. Diese Information nennen wir <strong>Label</strong> zum Feature-Vektor <span class="math inline">\(\bf{x}\)</span>. Wir bezeichnen den Label stets mit <span class="math inline">\(\bf{y}\)</span>. Der Label kann ebenfalls ein Vektor oder auch nur ein einzelner Wert sein. Letzteres ist in unseren Beispielen stets der Fall.</p>
 </div>
-<div id="labelled-example" class="section level2" number="5.5">
+<div id="labelled-example" class="section level2" number="6.5">
 <h2>
-<span class="header-section-number">5.5</span> Labelled Example<a class="anchor" aria-label="anchor" href="#labelled-example"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.5</span> Labelled Example<a class="anchor" aria-label="anchor" href="#labelled-example"><i class="fas fa-link"></i></a>
 </h2>
 <p>Das Paar <span class="math inline">\((\textbf{x},\bf{y})\)</span> bestehend aus dem Feature-Vektor und dem Label <span class="math inline">\(\bf{y}\)</span>. heißt auch <strong>Labelled Example</strong>.</p>
 <p>Schreibweise: Notieren wir den Feature-Vektor im Kontext mit <span class="math inline">\(\bf{x_i}\)</span>, so schreiben wir <span class="math inline">\(\bf{y_i}\)</span> für den zugehörigen Label.</p>
 </div>
-<div id="bemerkungen" class="section level2" number="5.6">
+<div id="bemerkungen" class="section level2" number="6.6">
 <h2>
-<span class="header-section-number">5.6</span> Bemerkungen<a class="anchor" aria-label="anchor" href="#bemerkungen"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.6</span> Bemerkungen<a class="anchor" aria-label="anchor" href="#bemerkungen"><i class="fas fa-link"></i></a>
 </h2>
 <p>Wir haben Feature-Vektoren in Analogie zur lineare Algebra definiert. Sie bestehen damit nur aus Zahlen. Alle bekannten Operationen sind definiert und grundsätzlich erlaubt. In der Praxis kann das zu Problemen führen, sofern Messungen nominal Skalen vorliegen, oder Werte fehlen.</p>
 
@@ -128,18 +128,18 @@ X \in \mathbb{R}^{n \times m}
 
 
   <div class="chapter-nav">
-<div class="prev"><a href="numpy-arrays.html"><span class="header-section-number">4</span> Numpy (Arrays)</a></div>
-<div class="next"><a href="chapter.html"><span class="header-section-number">6</span> Chapter</a></div>
+<div class="prev"><a href="numpy-arrays.html"><span class="header-section-number">5</span> Numpy-Arrays</a></div>
+<div class="next"><a href="chapter.html"><span class="header-section-number">7</span> Chapter</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#feature-matrix-und-label"><span class="header-section-number">5</span> Feature-Matrix und Label</a></li>
-<li><a class="nav-link" href="#numerische-features-merkmal"><span class="header-section-number">5.1</span> Numerische Features (Merkmal)</a></li>
-<li><a class="nav-link" href="#feature-vektor-merkmals-vektor"><span class="header-section-number">5.2</span> Feature-Vektor (Merkmals-Vektor)</a></li>
-<li><a class="nav-link" href="#feature-matrix"><span class="header-section-number">5.3</span> Feature-Matrix</a></li>
-<li><a class="nav-link" href="#label"><span class="header-section-number">5.4</span> Label</a></li>
-<li><a class="nav-link" href="#labelled-example"><span class="header-section-number">5.5</span> Labelled Example</a></li>
-<li><a class="nav-link" href="#bemerkungen"><span class="header-section-number">5.6</span> Bemerkungen</a></li>
+<li><a class="nav-link" href="#feature-matrix-und-label"><span class="header-section-number">6</span> Feature-Matrix und Label</a></li>
+<li><a class="nav-link" href="#numerische-features-merkmal"><span class="header-section-number">6.1</span> Numerische Features (Merkmal)</a></li>
+<li><a class="nav-link" href="#feature-vektor-merkmals-vektor"><span class="header-section-number">6.2</span> Feature-Vektor (Merkmals-Vektor)</a></li>
+<li><a class="nav-link" href="#feature-matrix"><span class="header-section-number">6.3</span> Feature-Matrix</a></li>
+<li><a class="nav-link" href="#label"><span class="header-section-number">6.4</span> Label</a></li>
+<li><a class="nav-link" href="#labelled-example"><span class="header-section-number">6.5</span> Labelled Example</a></li>
+<li><a class="nav-link" href="#bemerkungen"><span class="header-section-number">6.6</span> Bemerkungen</a></li>
 </ul>
 
       <div class="book-extra">
@@ -156,7 +156,7 @@ X \in \mathbb{R}^{n \times m}
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Data Science &amp; Machine Learning</strong>" was written by Dieter Greipl. It was last built on 2022-03-12.</p>
+    <p>"<strong>Data Science &amp; Machine Learning</strong>" was written by Dieter Greipl. It was last built on 2022-03-13.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
