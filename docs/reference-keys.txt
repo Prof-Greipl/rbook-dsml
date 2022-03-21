@@ -1,4 +1,3 @@
-part-teil-a-grundlagen
 python---quickstart
 hallo-welt
 programme-und-fehler
@@ -10,6 +9,7 @@ datentypen
 zahlen
 strings
 boolean
+listen-und-tupel
 listen
 zusammenfassung
 übungen
@@ -48,3 +48,24 @@ shape-dimension-1
 skalare-multiplikation-und-addition-1
 matrixmultiplikation
 übungen-2
+allgemeine-numpy-arrays
+arrays-erzeugen
+np.ones-und-np.zeros
+np.arange
+np.linspace
+operationen-auf-arrays
+aggregierende-operationen
+elementweise-operationen
+zufallszahlen
+gleichverteilung
+normalverteilung
+konstanten
+einfache-funktionen
+dataframes
+grundlagen
+beispiel-3
+überblick-verschaffen
+spalten-auswählen
+numpy-array-aus-dataframe-erzeugen
+dataframe-aus-numpy-array-erzeugen
+spaltennamen-ändern

@@ -4,19 +4,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 3 Daten | Data Science &amp; Machine Learning</title>
+<title>Chapter 2 Daten | Data Science &amp; Machine Learning</title>
 <meta name="author" content="Dieter Greipl">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 3 Daten | Data Science &amp; Machine Learning">
+<meta property="og:title" content="Chapter 2 Daten | Data Science &amp; Machine Learning">
 <meta property="og:type" content="book">
 <meta property="og:image" content="/assets/x.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 3 Daten | Data Science &amp; Machine Learning">
+<meta name="twitter:title" content="Chapter 2 Daten | Data Science &amp; Machine Learning">
 <meta name="twitter:image" content="/assets/x.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Sen-0.4.0/font.css" rel="stylesheet">
-<script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><style>
     #content {
         font-size: 0.95rem;
@@ -49,25 +48,26 @@
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Einführung</a></li>
 <li class="book-part">Teil A: Grundlagen</li>
-<li><a class="" href="python---quickstart.html"><span class="header-section-number">2</span> Python - Quickstart</a></li>
-<li><a class="active" href="daten.html"><span class="header-section-number">3</span> Daten</a></li>
-<li><a class="" href="lineare-algebra.html"><span class="header-section-number">4</span> Lineare Algebra</a></li>
-<li><a class="" href="numpy-arrays.html"><span class="header-section-number">5</span> Numpy-Arrays</a></li>
+<li><a class="" href="python---quickstart.html"><span class="header-section-number">1</span> Python - Quickstart</a></li>
+<li><a class="active" href="daten.html"><span class="header-section-number">2</span> Daten</a></li>
+<li><a class="" href="lineare-algebra.html"><span class="header-section-number">3</span> Lineare Algebra</a></li>
+<li><a class="" href="numpy-arrays.html"><span class="header-section-number">4</span> Numpy-Arrays</a></li>
+<li><a class="" href="dataframes.html"><span class="header-section-number">5</span> Dataframes</a></li>
 </ul>
 
         <div class="book-extra">
-          
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="daten" class="section level1" number="3">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="daten" class="section level1" number="2">
 <h1>
-<span class="header-section-number">3</span> Daten<a class="anchor" aria-label="anchor" href="#daten"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2</span> Daten<a class="anchor" aria-label="anchor" href="#daten"><i class="fas fa-link"></i></a>
 </h1>
-<p>Daten<a href="numpy-arrays.html#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> sind Ergebnisse von Beobachtungen, Messungen oder Berechnungen, die in einer bestimmten Form notiert, sind. Häufig sprechen sprechen wir auch von <em>Werten</em>, statt von Daten. Wenn wir viele gleichartige Daten erfassen, aufbereiten und Zusammengänge analysieren, so lassen sich daraus möglicherweise mittels Algorithmen komplexe Aufgabenstellungen lösen. Wir erläutern diese Idee anhand des Iris-Datensatzes<a href="numpy-arrays.html#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> (engl. <em>Iris flower data set</em>).</p>
-<div id="iris-datensatz" class="section level2" number="3.1">
+<p>Daten<a href="dataframes.html#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> sind Ergebnisse von Beobachtungen, Messungen oder Berechnungen, die in einer bestimmten Form notiert, sind. Häufig sprechen sprechen wir auch von <em>Werten</em>, statt von Daten. Wenn wir viele gleichartige Daten erfassen, aufbereiten und Zusammengänge analysieren, so lassen sich daraus möglicherweise mittels Algorithmen komplexe Aufgabenstellungen lösen. Wir erläutern diese Idee anhand des Iris-Datensatzes<a href="dataframes.html#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> (engl. <em>Iris flower data set</em>).</p>
+<div id="iris-datensatz" class="section level2" number="2.1">
 <h2>
-<span class="header-section-number">3.1</span> Iris-Datensatz<a class="anchor" aria-label="anchor" href="#iris-datensatz"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.1</span> Iris-Datensatz<a class="anchor" aria-label="anchor" href="#iris-datensatz"><i class="fas fa-link"></i></a>
 </h2>
 <p>Der Iris-Datensatz ist einer der bekanntesten Datensätze für Maschinelles Lernen und entstand 1936. Gegenstand der Messung waren 150 Lilien der Arten <em>Iris setosa</em>, <em>Iris versicolor</em>, und <em>Iris virginica</em>. Gemessen wurden für je eine Blüte jeweils (in cm):</p>
 <ul>
@@ -79,7 +79,7 @@
 <img src="assets/02-daten.assets/Download.png" style="width:100.0%" alt=""><p class="caption">Lilienarten</p>
 </div>
 <div class="figure">
-<img src="assets/02-daten.assets/image_messung-16426070933692.png" alt=""><p class="caption">Messung von Länge und Breite<a href="numpy-arrays.html#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<img src="assets/02-daten.assets/image_messung-16426070933692.png" alt=""><p class="caption">Messung von Länge und Breite<a href="dataframes.html#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
 </div>
 <p>Nachfolgende Tabellen zeigen die Aufzeichnungen der ersten 5 Messungen gefolgt und der letzten 5 Messungen. Der Datensatz enthält jeweils 50 Lilien jeder Sorte. Die Spezies wird in der letzten Spalte unter <code>class</code> angegeben</p>
 <p>Die ersten 5 Datensätze (#0 - #4):</p>
@@ -97,12 +97,12 @@
 #&gt; 148        6.2        3.4        5.4        2.3  virginica
 #&gt; 149        5.9        3.0        5.1        1.8  virginica</code></pre>
 <p>Wir greifen zwar etwas vor, aber an diesem Beispiel lässt sich eine typische Aufgabenstellung von Machine Learning recht einfach erklären: Ein Bobachter erhebt für die Blüte einer Lilie die Messwerte <code>sepal_len, sepal_wid, petal_len, petal_wid</code> und will daraus die Art dieser Lilie bestimmen.</p>
-<p>Nehmen wir nun an, dass der Beobachter die Werte <span class="math inline">\((5.1, 3.5, 1.4, 0.2)\)</span> misst. Wir erkennen, dass genau diese Werte als Datenzeile <span class="math inline">\(0\)</span> in unserem Datensatz vorliegen und bereits von einer <em>Setosa</em> erhoben wurden (Spalte <code>class</code>). Wir werden natürlich <em>Setosa</em> als Art dieser Blüte angeben. Dieser Fall wir wohl eher selten auftreten. Schwieriger ist die Antwort zum Beispiel für die Messwerte <span class="math inline">\((6.1, 3.2, 5.3, 2.1)\)</span>, die nicht als Zeile in unserem Datensatz auftreten. Mit etwas Recherche finden wir heraus, dass Datensatz 148 für die recht ähnlichen Werte <span class="math inline">\((6.2, 3.4, 5.4, 2.3)\)</span> für eine Virginica enthält. Wir könnten also mit der Art “Virginica” antworten.<a href="numpy-arrays.html#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<p>Nehmen wir nun an, dass der Beobachter die Werte <span class="math inline">\((5.1, 3.5, 1.4, 0.2)\)</span> misst. Wir erkennen, dass genau diese Werte als Datenzeile <span class="math inline">\(0\)</span> in unserem Datensatz vorliegen und bereits von einer <em>Setosa</em> erhoben wurden (Spalte <code>class</code>). Wir werden natürlich <em>Setosa</em> als Art dieser Blüte angeben. Dieser Fall wir wohl eher selten auftreten. Schwieriger ist die Antwort zum Beispiel für die Messwerte <span class="math inline">\((6.1, 3.2, 5.3, 2.1)\)</span>, die nicht als Zeile in unserem Datensatz auftreten. Mit etwas Recherche finden wir heraus, dass Datensatz 148 für die recht ähnlichen Werte <span class="math inline">\((6.2, 3.4, 5.4, 2.3)\)</span> für eine Virginica enthält. Wir könnten also mit der Art “Virginica” antworten.<a href="dataframes.html#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
 <p>Um Datensätze für <em>Machine Learning</em> zu verwenden, müssen wir wir sie vorher auf Tauglichkeit untersuchen, eventuell korrigieren, filtern und so weiter.</p>
 </div>
-<div id="variablen" class="section level2" number="3.2">
+<div id="variablen" class="section level2" number="2.2">
 <h2>
-<span class="header-section-number">3.2</span> <strong>Variablen</strong><a class="anchor" aria-label="anchor" href="#variablen"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.2</span> <strong>Variablen</strong><a class="anchor" aria-label="anchor" href="#variablen"><i class="fas fa-link"></i></a>
 </h2>
 <p>Eine Beobachtung oder Messung eines einzelnen Wertes formulieren wir in obigem Beispiel in der Form “<em>Sepal-Länge: 5,1cm</em>”. Die Beobachtung <em>Sepal-Länge</em> wird bei verschiedenen Blüten verschiedene Werte annehmen. Zum Umgang mit diesen Werten verwenden wie Variablen. Variablen sind Platzhalter oder Speicher für Werte, wir sprechen also vom <em>Wert einer Variable</em>. Im nachfolgendem Beispiel wird der Variable mit dem Namen <code>sepal_laenge</code> der Wert <span class="math inline">\(5.1\)</span> zugewiesen. Variablen haben immer einen Namen. Einen Wert erhalten sie erst durch eine sog. Zuweisung (wie in Zeile 1). In Zeile 2 drucken wir den Wert aus. Führen Sie also folgende Phython-Befehle aus:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="daten.html#cb8-1" aria-hidden="true" tabindex="-1"></a>sepal_len <span class="op">=</span> <span class="fl">5.1</span></span>
@@ -118,9 +118,9 @@
 <li>Vermeiden sie Umlaute in Variablen</li>
 </ul>
 </div>
-<div id="datentypen" class="section level2" number="3.3">
+<div id="datentypen" class="section level2" number="2.3">
 <h2>
-<span class="header-section-number">3.3</span> Datentypen<a class="anchor" aria-label="anchor" href="#datentypen"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.3</span> Datentypen<a class="anchor" aria-label="anchor" href="#datentypen"><i class="fas fa-link"></i></a>
 </h2>
 <p>Ein Wert einer Messung kann neben einer Zahl <span class="math inline">\(5.1\)</span> auch ein Text (zum Beispiel “<em>sehr gut</em>”) sein. Offensichtlich gehören beide Werte zu verschiedene Typen von Werten, den sogenannten Datentypen. Zudem brauchen wir logischen Datentypen, um zu bewerten, ob Sachverhalte <em>wahr</em> (<code>True</code>) oder <em>falsch</em> (<code>False</code>) sind. Wir beschäftigen uns also mit den Datentypen</p>
 <ul>
@@ -131,11 +131,11 @@
 <em>Boolean</em> (logische Werte).</li>
 </ul>
 <p>Werte mit diesen Datentypen lassen sich zu Listen und Tupel zusammenfassen. Wir behandeln sie am Ende des Abschnittes.</p>
-<div id="zahlen" class="section level3" number="3.3.1">
+<div id="zahlen" class="section level3" number="2.3.1">
 <h3>
-<span class="header-section-number">3.3.1</span> <strong>Zahlen</strong><a class="anchor" aria-label="anchor" href="#zahlen"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.3.1</span> <strong>Zahlen</strong><a class="anchor" aria-label="anchor" href="#zahlen"><i class="fas fa-link"></i></a>
 </h3>
-<p>Werte dieses Datentyps sind z.B. <span class="math inline">\(1\)</span>, <span class="math inline">\(-1\)</span>, <span class="math inline">\(1.7\)</span> oder <span class="math inline">\(1/3\)</span>. Wie sie wissen, lässt sich die Menge der Zahlen noch weiter einteilen in natürliche Zahlen und reelle Zahlen <a href="numpy-arrays.html#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>. Zur Notation diese Zahlenmengen verwenden wir die üblichen Symbole <span class="math inline">\(\mathbb{N}\)</span> für die natürlichen Zahlen und <span class="math inline">\(\mathbb{R}\)</span> für die reellen Zahlen.</p>
+<p>Werte dieses Datentyps sind z.B. <span class="math inline">\(1\)</span>, <span class="math inline">\(-1\)</span>, <span class="math inline">\(1.7\)</span> oder <span class="math inline">\(1/3\)</span>. Wie sie wissen, lässt sich die Menge der Zahlen noch weiter einteilen in natürliche Zahlen und reelle Zahlen <a href="dataframes.html#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>. Zur Notation diese Zahlenmengen verwenden wir die üblichen Symbole <span class="math inline">\(\mathbb{N}\)</span> für die natürlichen Zahlen und <span class="math inline">\(\mathbb{R}\)</span> für die reellen Zahlen.</p>
 <p>Wir notieren Zahlen wie üblich und verwenden in der Dezimalnotation den Punkt als Trennsymbol.</p>
 <p>Nachfolgendes Beispiel zeigt anhand einfacher Programmzeilen die Darstellung von Zahlen und zugleich schon die Verwendung der üblichen Operatoren für Addition und Multiplikation.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="daten.html#cb10-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
@@ -187,9 +187,9 @@
 <p>Wir werden mit diesen Operationen zurechtkommen. Mehr finden Sie unter <a href="https://www.w3schools.com/python/python_operators.asp" class="uri">https://www.w3schools.com/python/python_operators.asp</a></p>
 </div>
 </div>
-<div id="strings" class="section level3" number="3.3.2">
+<div id="strings" class="section level3" number="2.3.2">
 <h3>
-<span class="header-section-number">3.3.2</span> <strong>Strings</strong><a class="anchor" aria-label="anchor" href="#strings"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.3.2</span> <strong>Strings</strong><a class="anchor" aria-label="anchor" href="#strings"><i class="fas fa-link"></i></a>
 </h3>
 <p>Strings sind Zeichenkette. Werte dieses Datentyps sind zum Beispiel “Baum”, “Hans Huber” oder “sehr gut”. Zeichenketten beginnen und enden mit einem Anführungszeichen. In der Regel macht uns diese Notationen keine Probleme - manchmal wird es trotzdem ungemütlich: Kann eine Zeichenkette ein Anführungszeichen enthalten? Gibt es einen Unterschied zwischen der Zahl 123 und der Zeichenkette “123”? Wir vertiefen das hier nicht, sondern gehen auf die Fragen an, sobald sie uns begegnen.</p>
 <p>Wir können einer Variable einen String zuweisen, wenn wir den Wert in Hochkommata setzen:</p>
@@ -206,9 +206,9 @@
 <p>Frage: Was erwarten sie für die Berechnung <span class="math inline">\(s-t\)</span> oder <span class="math inline">\(s*t\)</span> ?</p>
 <p>Mehr lesen: <a href="https://www.w3schools.com/python/gloss_python_string_concatenation.asp" class="uri">https://www.w3schools.com/python/gloss_python_string_concatenation.asp</a></p>
 </div>
-<div id="boolean" class="section level3" number="3.3.3">
+<div id="boolean" class="section level3" number="2.3.3">
 <h3>
-<span class="header-section-number">3.3.3</span> <strong>Boolean</strong><a class="anchor" aria-label="anchor" href="#boolean"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.3.3</span> <strong>Boolean</strong><a class="anchor" aria-label="anchor" href="#boolean"><i class="fas fa-link"></i></a>
 </h3>
 <p>Der Datentyp Boolean (logischer Datentyp) umfasst nur zwei Werte, die sogenannten Wahrheitswerte. Wir werden in diesem Text die Notation <em>True</em> und <em>False</em> verwenden.</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="daten.html#cb20-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="va">True</span><span class="op">;</span></span>
@@ -223,14 +223,14 @@
 #&gt; False
 #&gt; &lt;class 'bool'&gt;</code></pre>
 </div>
-<div id="listen" class="section level3" number="3.3.4">
+<div id="listen-und-tupel" class="section level3" number="2.3.4">
 <h3>
-<span class="header-section-number">3.3.4</span> Listen und Tupel<a class="anchor" aria-label="anchor" href="#listen"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.3.4</span> Listen und Tupel<a class="anchor" aria-label="anchor" href="#listen-und-tupel"><i class="fas fa-link"></i></a>
 </h3>
 <p>Listen und Tupel sind eine geordnete Zusammenstellung von Werten.</p>
-<div id="listen" class="section level4" number="3.3.4.1">
+<div id="listen" class="section level4" number="2.3.4.1">
 <h4>
-<span class="header-section-number">3.3.4.1</span> <strong>Listen</strong><a class="anchor" aria-label="anchor" href="#listen"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.3.4.1</span> <strong>Listen</strong><a class="anchor" aria-label="anchor" href="#listen"><i class="fas fa-link"></i></a>
 </h4>
 <p>Folgendes Beispiel illustriert den Datentype <code>list</code></p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="daten.html#cb22-1" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"cherry"</span>]</span>
@@ -276,18 +276,18 @@
 <p>Beachten sie, dass der Versuch einer Änderung durch <code>t[0] = 1</code> zu einem Fehler führt (Test als Übung!).</p>
 </div>
 </div>
-<div id="zusammenfassung" class="section level3" number="3.3.5">
+<div id="zusammenfassung" class="section level3" number="2.3.5">
 <h3>
-<span class="header-section-number">3.3.5</span> Zusammenfassung<a class="anchor" aria-label="anchor" href="#zusammenfassung"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.3.5</span> Zusammenfassung<a class="anchor" aria-label="anchor" href="#zusammenfassung"><i class="fas fa-link"></i></a>
 </h3>
 <p>Die Datentypen <code>int</code>, <code>float</code>, <code>bool</code>, <code>list</code> und <code>tupel</code> sind in Python eingebaut. Wir werden später weitere, kompliziertere Datentypen kennenlernen, die über Erweiterung von Python verfügbar sind. Eine komplette Aufzählung aller Datentypen finden sie unter <a href="https://www.w3schools.com/python/python_datatypes.asp" class="uri">https://www.w3schools.com/python/python_datatypes.asp</a>. Wie sie sehen, haben wir nicht alle Varianten behandelt.</p>
 <div class="rmdnote">
 <p>Stellen sie sich jeden Datentyp als Menge vor. Die Elemente der Menge sind die zulässigen Werte des Datentyps. Offensichtlich ist besitzt die Menge der Zahlen oder Texte unendlich viele Elemente, während der Logische Datentyp nur zwei Werte kennt.</p>
 </div>
 </div>
-<div id="übungen" class="section level3" number="3.3.6">
+<div id="übungen" class="section level3" number="2.3.6">
 <h3>
-<span class="header-section-number">3.3.6</span> Übungen<a class="anchor" aria-label="anchor" href="#%C3%BCbungen"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.3.6</span> Übungen<a class="anchor" aria-label="anchor" href="#%C3%BCbungen"><i class="fas fa-link"></i></a>
 </h3>
 <ol style="list-style-type: decimal">
 <li><p>Geben sie die Ergebnisse der Rechnungen <span class="math inline">\(3-1.1\)</span> und <span class="math inline">\(12 / 5\)</span> aus.</p></li>
@@ -300,9 +300,9 @@
 </ol>
 </div>
 </div>
-<div id="skalenniveaus" class="section level2" number="3.4">
+<div id="skalenniveaus" class="section level2" number="2.4">
 <h2>
-<span class="header-section-number">3.4</span> Skalenniveaus<a class="anchor" aria-label="anchor" href="#skalenniveaus"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.4</span> Skalenniveaus<a class="anchor" aria-label="anchor" href="#skalenniveaus"><i class="fas fa-link"></i></a>
 </h2>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -345,7 +345,7 @@
 <td>Ratio</td>
 <td><span class="math display">\[\cdot , /\]</span></td>
 <td>Der Nullpunkt ist eindeutig definiert.</td>
-<td>(Verallgemeinerter) Mittelwert<a href="numpy-arrays.html#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>
+<td>(Verallgemeinerter) Mittelwert<a href="dataframes.html#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>
 </td>
 <td>Alter</td>
 </tr>
@@ -386,9 +386,9 @@
 </table></div>
 <p>Diese einfache Zuordnung weist auf einen wichtigen Arbeitsschritt hin: dem Auf- und Vorbereiten der Daten für die weitere Bearbeitung.</p>
 </div>
-<div id="übungen-1" class="section level3" number="3.4.1">
+<div id="übungen-1" class="section level3" number="2.4.1">
 <h3>
-<span class="header-section-number">3.4.1</span> Übungen<a class="anchor" aria-label="anchor" href="#%C3%BCbungen-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.4.1</span> Übungen<a class="anchor" aria-label="anchor" href="#%C3%BCbungen-1"><i class="fas fa-link"></i></a>
 </h3>
 <ol style="list-style-type: decimal">
 <li>Welches Skalenniveau haben die einzelnen Spalten im Iris-Datensatz?</li>
@@ -398,32 +398,33 @@
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="python---quickstart.html"><span class="header-section-number">2</span> Python - Quickstart</a></div>
-<div class="next"><a href="lineare-algebra.html"><span class="header-section-number">4</span> Lineare Algebra</a></div>
+<div class="prev"><a href="python---quickstart.html"><span class="header-section-number">1</span> Python - Quickstart</a></div>
+<div class="next"><a href="lineare-algebra.html"><span class="header-section-number">3</span> Lineare Algebra</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#daten"><span class="header-section-number">3</span> Daten</a></li>
-<li><a class="nav-link" href="#iris-datensatz"><span class="header-section-number">3.1</span> Iris-Datensatz</a></li>
-<li><a class="nav-link" href="#variablen"><span class="header-section-number">3.2</span> Variablen</a></li>
+<li><a class="nav-link" href="#daten"><span class="header-section-number">2</span> Daten</a></li>
+<li><a class="nav-link" href="#iris-datensatz"><span class="header-section-number">2.1</span> Iris-Datensatz</a></li>
+<li><a class="nav-link" href="#variablen"><span class="header-section-number">2.2</span> Variablen</a></li>
 <li>
-<a class="nav-link" href="#datentypen"><span class="header-section-number">3.3</span> Datentypen</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#zahlen"><span class="header-section-number">3.3.1</span> Zahlen</a></li>
-<li><a class="nav-link" href="#strings"><span class="header-section-number">3.3.2</span> Strings</a></li>
-<li><a class="nav-link" href="#boolean"><span class="header-section-number">3.3.3</span> Boolean</a></li>
-<li><a class="nav-link" href="#listen"><span class="header-section-number">3.3.4</span> Listen und Tupel</a></li>
-<li><a class="nav-link" href="#zusammenfassung"><span class="header-section-number">3.3.5</span> Zusammenfassung</a></li>
-<li><a class="nav-link" href="#%C3%BCbungen"><span class="header-section-number">3.3.6</span> Übungen</a></li>
+<a class="nav-link" href="#datentypen"><span class="header-section-number">2.3</span> Datentypen</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#zahlen"><span class="header-section-number">2.3.1</span> Zahlen</a></li>
+<li><a class="nav-link" href="#strings"><span class="header-section-number">2.3.2</span> Strings</a></li>
+<li><a class="nav-link" href="#boolean"><span class="header-section-number">2.3.3</span> Boolean</a></li>
+<li><a class="nav-link" href="#listen-und-tupel"><span class="header-section-number">2.3.4</span> Listen und Tupel</a></li>
+<li><a class="nav-link" href="#zusammenfassung"><span class="header-section-number">2.3.5</span> Zusammenfassung</a></li>
+<li><a class="nav-link" href="#%C3%BCbungen"><span class="header-section-number">2.3.6</span> Übungen</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#skalenniveaus"><span class="header-section-number">3.4</span> Skalenniveaus</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#%C3%BCbungen-1"><span class="header-section-number">3.4.1</span> Übungen</a></li></ul>
+<a class="nav-link" href="#skalenniveaus"><span class="header-section-number">2.4</span> Skalenniveaus</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#%C3%BCbungen-1"><span class="header-section-number">2.4.1</span> Übungen</a></li></ul>
 </li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-          
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/02-daten.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/02-daten.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -435,7 +436,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Data Science &amp; Machine Learning</strong>" was written by Dieter Greipl. It was last built on 2022-03-14.</p>
+    <p>"<strong>Data Science &amp; Machine Learning</strong>" was written by Dieter Greipl. It was last built on 2022-03-21.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

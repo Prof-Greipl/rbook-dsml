@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 6 Visualisierung | Data Science &amp; Machine Learning</title>
+<meta name="author" content="Dieter Greipl">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 6 Visualisierung | Data Science &amp; Machine Learning">
+<meta property="og:type" content="book">
+<meta property="og:image" content="/assets/x.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 6 Visualisierung | Data Science &amp; Machine Learning">
+<meta name="twitter:image" content="/assets/x.png">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><style>
+    #content {
+        font-size: 0.95rem;
+    }
+    </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="bs4_style.css">
+<meta name="description" content="Mathplotlib (https://matplotlib.org/) ist eine Sammlung von Funktionen (Bibliothek) zum Visualisieren von Daten. Wir verwenden mathplotlib zusammen mit dem ergänzenden Programmpaket Seaborn.  6.1...">
+<meta property="og:description" content="Mathplotlib (https://matplotlib.org/) ist eine Sammlung von Funktionen (Bibliothek) zum Visualisieren von Daten. Wir verwenden mathplotlib zusammen mit dem ergänzenden Programmpaket Seaborn.  6.1...">
+<meta name="twitter:description" content="Mathplotlib (https://matplotlib.org/) ist eine Sammlung von Funktionen (Bibliothek) zum Visualisieren von Daten. Wir verwenden mathplotlib zusammen mit dem ergänzenden Programmpaket Seaborn.  6.1...">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Data Science &amp; Machine Learning</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Einführung</a></li>
+<li class="book-part">Teil A: Grundlagen</li>
+<li><a class="" href="python---quickstart.html"><span class="header-section-number">1</span> Python - Quickstart</a></li>
+<li><a class="" href="daten.html"><span class="header-section-number">2</span> Daten</a></li>
+<li><a class="" href="lineare-algebra.html"><span class="header-section-number">3</span> Lineare Algebra</a></li>
+<li><a class="" href="numpy-arrays.html"><span class="header-section-number">4</span> Numpy-Arrays</a></li>
+<li><a class="" href="visualisierung.html"><span class="header-section-number">5</span> Visualisierung</a></li>
+<li><a class="active" href="visualisierung-1.html"><span class="header-section-number">6</span> Visualisierung</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="visualisierung-1" class="section level1" number="6">
+<h1>
+<span class="header-section-number">6</span> Visualisierung<a class="anchor" aria-label="anchor" href="#visualisierung-1"><i class="fas fa-link"></i></a>
+</h1>
+<p>Mathplotlib (<a href="https://matplotlib.org">https://matplotlib.org/</a>) ist eine Sammlung von Funktionen (Bibliothek) zum Visualisieren von Daten. Wir verwenden mathplotlib zusammen mit dem ergänzenden Programmpaket Seaborn.</p>
+<div id="matplotlib" class="section level2" number="6.1">
+<h2>
+<span class="header-section-number">6.1</span> Matplotlib<a class="anchor" aria-label="anchor" href="#matplotlib"><i class="fas fa-link"></i></a>
+</h2>
+<p>Wichtig: Sie müssen die folgenden beiden Zeilen stets am Beginn des Programms stehen haben.</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="visualisierung-1.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
+</div>
+<div id="scatterplot" class="section level2" number="6.2">
+<h2>
+<span class="header-section-number">6.2</span> Scatterplot<a class="anchor" aria-label="anchor" href="#scatterplot"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="visualisierung-1.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb55-2"><a href="visualisierung-1.html#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb55-3"><a href="visualisierung-1.html#cb55-3" aria-hidden="true" tabindex="-1"></a>years <span class="op">=</span> [<span class="dv">1950</span>, <span class="dv">1960</span>, <span class="dv">1970</span>, <span class="dv">1980</span>, <span class="dv">1990</span>, <span class="dv">2000</span>, <span class="dv">2010</span>]</span>
+<span id="cb55-4"><a href="visualisierung-1.html#cb55-4" aria-hidden="true" tabindex="-1"></a>gdp <span class="op">=</span> [<span class="fl">33.2</span>, <span class="fl">543.3</span>, <span class="fl">1075.9</span>, <span class="fl">2862.5</span>, <span class="fl">5979.6</span>, <span class="fl">10289.7</span>, <span class="fl">14958.3</span>]</span>
+<span id="cb55-5"><a href="visualisierung-1.html#cb55-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-6"><a href="visualisierung-1.html#cb55-6" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>()</span>
+<span id="cb55-7"><a href="visualisierung-1.html#cb55-7" aria-hidden="true" tabindex="-1"></a>fig,ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">9</span>))</span>
+<span id="cb55-8"><a href="visualisierung-1.html#cb55-8" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Title"</span>) </span>
+<span id="cb55-9"><a href="visualisierung-1.html#cb55-9" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"x-axis"</span>)</span>
+<span id="cb55-10"><a href="visualisierung-1.html#cb55-10" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"y-axis"</span>)</span>
+<span id="cb55-11"><a href="visualisierung-1.html#cb55-11" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb55-12"><a href="visualisierung-1.html#cb55-12" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">50</span>)</span>
+<span id="cb55-13"><a href="visualisierung-1.html#cb55-13" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">35</span>)</span>
+<span id="cb55-14"><a href="visualisierung-1.html#cb55-14" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span>years, y<span class="op">=</span>gdp, color<span class="op">=</span><span class="st">"red"</span>, label<span class="op">=</span><span class="st">"My Label"</span>)          </span></code></pre></div>
+<div class="inline-figure"><img src="06-visualisierung_files/figure-html/unnamed-chunk-2-1.png" width="864"></div>
+<p>Ausgabe:</p>
+<pre><code>#&gt; (0.0, 50.0)
+#&gt; (0.0, 35.0)</code></pre>
+<div class="inline-figure"><img src="06-visualisierung_files/figure-html/unnamed-chunk-3-3.png" width="864"></div>
+<p>Hinweise:</p>
+<ul>
+<li>Zu Farben siehe : <a href="https://seaborn.pydata.org/tutorial/color_palettes.html" class="uri">https://seaborn.pydata.org/tutorial/color_palettes.html</a> (Vorsicht, anspruchsvoll)</li>
+<li>Formatierung der Achsen beachten</li>
+</ul>
+</div>
+<div id="liniendiagramme" class="section level2" number="6.3">
+<h2>
+<span class="header-section-number">6.3</span> Liniendiagramme<a class="anchor" aria-label="anchor" href="#liniendiagramme"><i class="fas fa-link"></i></a>
+</h2>
+<p>Hier ein erstes Beispiel:</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="visualisierung-1.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Line</span></span>
+<span id="cb57-2"><a href="visualisierung-1.html#cb57-2" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span>years, y<span class="op">=</span>gdp, color<span class="op">=</span><span class="st">"red"</span>, label<span class="op">=</span><span class="st">"My Label"</span>)</span></code></pre></div>
+<div class="figure">
+<img src="readme.assets/image-20211209164634964.png" alt=""><p class="caption">image-20211209164634964</p>
+</div>
+</div>
+<div id="barplot" class="section level2" number="6.4">
+<h2>
+<span class="header-section-number">6.4</span> Barplot<a class="anchor" aria-label="anchor" href="#barplot"><i class="fas fa-link"></i></a>
+</h2>
+<pre><code>sns.barplot(x=years, y=gdp, color="red", label="My Label")</code></pre>
+</div>
+<div id="histogramme" class="section level2" number="6.5">
+<h2>
+<span class="header-section-number">6.5</span> Histogramme<a class="anchor" aria-label="anchor" href="#histogramme"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="visualisierung-1.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb59-2"><a href="visualisierung-1.html#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb59-3"><a href="visualisierung-1.html#cb59-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-4"><a href="visualisierung-1.html#cb59-4" aria-hidden="true" tabindex="-1"></a>x_werte <span class="op">=</span>  [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>,<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>]</span>
+<span id="cb59-5"><a href="visualisierung-1.html#cb59-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-6"><a href="visualisierung-1.html#cb59-6" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>()</span>
+<span id="cb59-7"><a href="visualisierung-1.html#cb59-7" aria-hidden="true" tabindex="-1"></a>sns.histplot(x <span class="op">=</span> x_werte,</span>
+<span id="cb59-8"><a href="visualisierung-1.html#cb59-8" aria-hidden="true" tabindex="-1"></a>             <span class="co">#binwidth=1,</span></span>
+<span id="cb59-9"><a href="visualisierung-1.html#cb59-9" aria-hidden="true" tabindex="-1"></a>             <span class="co">#bins="auto",</span></span>
+<span id="cb59-10"><a href="visualisierung-1.html#cb59-10" aria-hidden="true" tabindex="-1"></a>             bins<span class="op">=</span>[<span class="dv">0</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">10</span>],</span>
+<span id="cb59-11"><a href="visualisierung-1.html#cb59-11" aria-hidden="true" tabindex="-1"></a>             kde <span class="op">=</span> <span class="va">False</span>)</span></code></pre></div>
+<div class="figure">
+<img src="readme.assets/image-20211210105040430.png" alt=""><p class="caption">image-20211210105040430</p>
+</div>
+</div>
+<div id="boxplots" class="section level2" number="6.6">
+<h2>
+<span class="header-section-number">6.6</span> Boxplots<a class="anchor" aria-label="anchor" href="#boxplots"><i class="fas fa-link"></i></a>
+</h2>
+<p>Link: <a href="https://seaborn.pydata.org/generated/seaborn.boxplot.html">https://seaborn.pydata.org/generated/seaborn.boxplot.html</a> </p>
+<p>Link: <a href="https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51" class="uri">https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51</a></p>
+<div class="figure">
+<img src="readme.assets/image-20211210123539036.png" alt=""><p class="caption">image-20211210123539036</p>
+</div>
+<p>Vertiefung:</p>
+<p><a href="http://rocketdatascience.org/?p=473">Outliers, Inliers, and Other Surprises that Fly from your Data | Rocket-Powered Data Science (rocketdatascience.org)</a></p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="visualisierung-1.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb60-2"><a href="visualisierung-1.html#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb60-3"><a href="visualisierung-1.html#cb60-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-4"><a href="visualisierung-1.html#cb60-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">1</span>,<span class="dv">101</span>)</span>
+<span id="cb60-5"><a href="visualisierung-1.html#cb60-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.concatenate( (x, [<span class="dv">152</span>] ))</span>
+<span id="cb60-6"><a href="visualisierung-1.html#cb60-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-7"><a href="visualisierung-1.html#cb60-7" aria-hidden="true" tabindex="-1"></a>percentiles <span class="op">=</span> np.percentile( x, [<span class="dv">0</span>,<span class="dv">25</span>,<span class="dv">50</span>,<span class="dv">75</span>,<span class="dv">100</span>])</span>
+<span id="cb60-8"><a href="visualisierung-1.html#cb60-8" aria-hidden="true" tabindex="-1"></a>IQR <span class="op">=</span> (percentiles[<span class="dv">3</span>] <span class="op">-</span>  percentiles[<span class="dv">1</span>])</span>
+<span id="cb60-9"><a href="visualisierung-1.html#cb60-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="st">"Pericentile         : "</span>, percentiles)</span>
+<span id="cb60-10"><a href="visualisierung-1.html#cb60-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="st">"IQR                 : "</span>, IQR)</span>
+<span id="cb60-11"><a href="visualisierung-1.html#cb60-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="st">"Upper Outlier Limit : "</span>, percentiles[<span class="dv">3</span>] <span class="op">+</span> <span class="fl">1.5</span><span class="op">*</span>IQR)</span>
+<span id="cb60-12"><a href="visualisierung-1.html#cb60-12" aria-hidden="true" tabindex="-1"></a>sns.boxplot(x <span class="op">=</span> x)</span></code></pre></div>
+<div class="figure">
+<img src="readme.assets/image-20211210124842057.png" alt=""><p class="caption">image-20211210124842057</p>
+</div>
+<div class="figure">
+<img src="readme.assets/image-20211210124819306.png" alt=""><p class="caption">image-20211210124819306</p>
+</div>
+</div>
+<div id="übungen-3" class="section level2" number="6.7">
+<h2>
+<span class="header-section-number">6.7</span> Übungen<a class="anchor" aria-label="anchor" href="#%C3%BCbungen-3"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="visualisierungsübung-1" class="section level2" number="6.8">
+<h2>
+<span class="header-section-number">6.8</span> Visualisierungsübung 1<a class="anchor" aria-label="anchor" href="#visualisierungs%C3%BCbung-1"><i class="fas fa-link"></i></a>
+</h2>
+<p>Versuchen sie folgende Kurve zu zeichnen:</p>
+<div class="figure">
+<img src="readme.assets/image-20211210101947217.png" alt=""><p class="caption">image-20211210101947217</p>
+</div>
+<p>(Die Lösung finden sie am Ende des Dokumentes)</p>
+</div>
+<div id="visualisierungsübung-2" class="section level2" number="6.9">
+<h2>
+<span class="header-section-number">6.9</span> Visualisierungsübung 2<a class="anchor" aria-label="anchor" href="#visualisierungs%C3%BCbung-2"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li>
+<p>Sie können mit numpy eine Liste mit 50 gleichverteilen Zufallszahlen erstellen. Erzeugen Sie zwei dieser Listen (x und y) und zeigen sie die 50 Paare Paare (x[i], y[i]) in einem Scatterplot an. So ähnlich (!) sollte die Ausgabe aussehen:</p>
+<div class="figure">
+<img src="readme.assets/image-20211210102949673.png" alt=""><p class="caption">image-20211210102949673</p>
+</div>
+</li>
+<li><p>Welches Ausgabe erwarten Sie, wenn Sie in 1. statt 50 Zahlen jeweils 2000 Zahlen erzeugen? Beschreiben sie das Ergebnis in 2-3 Sätzen.</p></li>
+<li><p>Wiederholen sie Aufgabe 1 mit der Normalverteilung (Erwartungswert 0, Standardabweichung 1) statt der Gleichverteilung. Verwenden sie 2000 Punkte. Überlegen sie bitte vorher: welche grafischen Ausgabe erwarten sie?</p></li>
+<li><p>Erzeugen Sie ein Histogramm für die Erzeugung von 10000 gleichverteilten (normalverteilten) Zufallszahlen. So ähnlich sollte das Ergebnis aussehen:</p></li>
+</ol>
+<div class="figure">
+<img src="readme.assets/image-20211210103950590.png" alt=""><p class="caption">image-20211210103950590</p>
+</div>
+</div>
+<div id="plots-für-iris" class="section level2" number="6.10">
+<h2>
+<span class="header-section-number">6.10</span> Plots für Iris<a class="anchor" aria-label="anchor" href="#plots-f%C3%BCr-iris"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="laden-der-daten" class="section level2" number="6.11">
+<h2>
+<span class="header-section-number">6.11</span> Laden der Daten<a class="anchor" aria-label="anchor" href="#laden-der-daten"><i class="fas fa-link"></i></a>
+</h2>
+<pre><code>import pandas as pd
+from sklearn import datasets
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+iris = datasets.load_iris()
+iris_df = pd.DataFrame(iris.data)
+iris_df['class']=iris.target_names[iris.target ]
+iris_df.columns=['sepal_len', 'sepal_wid', 'petal_len', 'petal_wid', 'class']</code></pre>
+</div>
+<div id="histogramm-für-ein-feature" class="section level2" number="6.12">
+<h2>
+<span class="header-section-number">6.12</span> Histogramm für ein Feature<a class="anchor" aria-label="anchor" href="#histogramm-f%C3%BCr-ein-feature"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="visualisierung-1.html#cb62-1" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>()</span>
+<span id="cb62-2"><a href="visualisierung-1.html#cb62-2" aria-hidden="true" tabindex="-1"></a>sns.histplot( iris_df, </span>
+<span id="cb62-3"><a href="visualisierung-1.html#cb62-3" aria-hidden="true" tabindex="-1"></a>             x <span class="op">=</span><span class="st">"petal_wid"</span>, </span>
+<span id="cb62-4"><a href="visualisierung-1.html#cb62-4" aria-hidden="true" tabindex="-1"></a>             bins<span class="op">=</span><span class="dv">10</span>,  <span class="co"># try bins="auto" und bins=10</span></span>
+<span id="cb62-5"><a href="visualisierung-1.html#cb62-5" aria-hidden="true" tabindex="-1"></a>             kde <span class="op">=</span> <span class="va">False</span>)</span></code></pre></div>
+<div class="figure">
+<img src="readme.assets/image-20211209170610859.png" alt=""><p class="caption">image-20211209170610859</p>
+</div>
+</div>
+<div id="relation-plots" class="section level2" number="6.13">
+<h2>
+<span class="header-section-number">6.13</span> Relation-Plots<a class="anchor" aria-label="anchor" href="#relation-plots"><i class="fas fa-link"></i></a>
+</h2>
+<pre><code>sns.relplot(data=iris_df, x="petal_len", y="sepal_wid", hue = "class", height=7)</code></pre>
+<div class="figure">
+<img src="readme.assets/image-20211209170740088.png" alt=""><p class="caption">image-20211209170740088</p>
+</div>
+</div>
+<div id="pairplots" class="section level2" number="6.14">
+<h2>
+<span class="header-section-number">6.14</span> Pairplots<a class="anchor" aria-label="anchor" href="#pairplots"><i class="fas fa-link"></i></a>
+</h2>
+<pre><code>sns.pairplot(iris_df[['sepal_len', 'sepal_wid', 'petal_len', 'petal_wid', 'class']],
+             hue="class", diag_kind="kde")</code></pre>
+<p>Ausgabe:</p>
+<div class="figure">
+<img src="readme.assets/image-20211209171426965.png" alt=""><p class="caption">image-20211209171426965</p>
+</div>
+</div>
+<div id="beispiele-bilder" class="section level2" number="6.15">
+<h2>
+<span class="header-section-number">6.15</span> Beispiele: Bilder<a class="anchor" aria-label="anchor" href="#beispiele-bilder"><i class="fas fa-link"></i></a>
+</h2>
+<p>Bilder lassen sich als Numpy-Arrays darstellen und bearbeiten. Unterstützte shapes sind:</p>
+<ul>
+<li>(M, N): ein Bild mit skalaren Werten (0-1 float oder 0-255 int). Visualisierung erfolgt über eine <em>colormap</em>.</li>
+<li>(M, N, 3): ein Farbbild mit RGB Werten (0-1 float oder 0-255 int).</li>
+</ul>
+<p>Die ersten beiden Werte (M, N) definieren die Anzahl der Zeilen und Spalten des Bildes.</p>
+<p>(Taken from <a href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.imshow.html">https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.imshow.html</a>)</p>
+</div>
+<div id="grauwert-bilder-als-nxm-matrix" class="section level2" number="6.16">
+<h2>
+<span class="header-section-number">6.16</span> Grauwert-Bilder als nxm Matrix<a class="anchor" aria-label="anchor" href="#grauwert-bilder-als-nxm-matrix"><i class="fas fa-link"></i></a>
+</h2>
+<p>Folgende Befehle erzeugen ein künstliches und (gleichverteilt) zufälliges Grauwertbild:</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="visualisierung-1.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb65-2"><a href="visualisierung-1.html#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb65-3"><a href="visualisierung-1.html#cb65-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-4"><a href="visualisierung-1.html#cb65-4" aria-hidden="true" tabindex="-1"></a>img <span class="op">=</span> np.random.rand(<span class="dv">10</span>,<span class="dv">10</span>)</span>
+<span id="cb65-5"><a href="visualisierung-1.html#cb65-5" aria-hidden="true" tabindex="-1"></a>plt.imshow(img, cmap<span class="op">=</span> plt.cm.get_cmap(<span class="st">'Oranges'</span>), vmin<span class="op">=</span><span class="dv">0</span>, vmax<span class="op">=</span><span class="dv">1</span>  )</span></code></pre></div>
+<p>Colormaps finden sie unter <a href="https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html">https://matplotlib.org/3.1.0/tutorials/colors/colormaps.html</a>. Sie können auch probieren: ‘Greys’, ‘Purples’, ‘Blues’, ‘Greens’, ‘Oranges’, ‘Reds’, ‘YlOrBr’, ‘YlOrRd’, ‘OrRd’, ‘PuRd’, ‘RdPu’, ‘BuPu’, ‘GnBu’, ‘PuBu’, ‘YlGnBu’, ‘PuBuGn’, ‘BuGn’, ‘YlGn’</p>
+</div>
+<div id="farbbilder-aus-datei-laden" class="section level2" number="6.17">
+<h2>
+<span class="header-section-number">6.17</span> Farbbilder aus Datei laden<a class="anchor" aria-label="anchor" href="#farbbilder-aus-datei-laden"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="visualisierung-1.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb66-2"><a href="visualisierung-1.html#cb66-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb66-3"><a href="visualisierung-1.html#cb66-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-4"><a href="visualisierung-1.html#cb66-4" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">'http://www.dietergreipl.de/wp-content/uploads/2019/10/owl-50267_1920.png'</span></span>
+<span id="cb66-5"><a href="visualisierung-1.html#cb66-5" aria-hidden="true" tabindex="-1"></a>eule <span class="op">=</span> plt.imread( url )</span>
+<span id="cb66-6"><a href="visualisierung-1.html#cb66-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(eule.shape)</span>
+<span id="cb66-7"><a href="visualisierung-1.html#cb66-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.amax( eule ))</span>
+<span id="cb66-8"><a href="visualisierung-1.html#cb66-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.amin( eule ))</span>
+<span id="cb66-9"><a href="visualisierung-1.html#cb66-9" aria-hidden="true" tabindex="-1"></a>plt.figure( figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">15</span>))</span>
+<span id="cb66-10"><a href="visualisierung-1.html#cb66-10" aria-hidden="true" tabindex="-1"></a>plt.imshow( eule )</span></code></pre></div>
+<div class="figure">
+<img src="readme.assets/image-20211210112329871.png" alt=""><p class="caption">image-20211210112329871</p>
+</div>
+</div>
+<div id="einfache-farbbilder-erzeugen" class="section level2" number="6.18">
+<h2>
+<span class="header-section-number">6.18</span> Einfache Farbbilder erzeugen<a class="anchor" aria-label="anchor" href="#einfache-farbbilder-erzeugen"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="visualisierung-1.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb67-2"><a href="visualisierung-1.html#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb67-3"><a href="visualisierung-1.html#cb67-3" aria-hidden="true" tabindex="-1"></a>img <span class="op">=</span> np.zeros( (<span class="dv">200</span>,<span class="dv">200</span>,<span class="dv">3</span>))</span>
+<span id="cb67-4"><a href="visualisierung-1.html#cb67-4" aria-hidden="true" tabindex="-1"></a>img[:,:,<span class="dv">1</span>] <span class="op">=</span> np.ones((<span class="dv">200</span>))</span>
+<span id="cb67-5"><a href="visualisierung-1.html#cb67-5" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb67-6"><a href="visualisierung-1.html#cb67-6" aria-hidden="true" tabindex="-1"></a>plt.imshow( img  )</span></code></pre></div>
+</div>
+<div id="komplett-zufälliges-farbbild" class="section level2" number="6.19">
+<h2>
+<span class="header-section-number">6.19</span> Komplett zufälliges Farbbild<a class="anchor" aria-label="anchor" href="#komplett-zuf%C3%A4lliges-farbbild"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="visualisierung-1.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb68-2"><a href="visualisierung-1.html#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb68-3"><a href="visualisierung-1.html#cb68-3" aria-hidden="true" tabindex="-1"></a>img <span class="op">=</span> np.random.random( <span class="dv">200</span><span class="op">*</span><span class="dv">200</span><span class="op">*</span><span class="dv">3</span>).reshape(<span class="dv">200</span>,<span class="dv">200</span>,<span class="dv">3</span>)</span>
+<span id="cb68-4"><a href="visualisierung-1.html#cb68-4" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span> (<span class="dv">9</span>,<span class="dv">9</span>))</span>
+<span id="cb68-5"><a href="visualisierung-1.html#cb68-5" aria-hidden="true" tabindex="-1"></a>plt.imshow( img  )</span></code></pre></div>
+<div class="figure">
+<img src="readme.assets/image-20211210112144985.png" alt=""><p class="caption">image-20211210112144985</p>
+</div>
+<div id="übungen-4" class="section level3" number="6.19.1">
+<h3>
+<span class="header-section-number">6.19.1</span> Übungen<a class="anchor" aria-label="anchor" href="#%C3%BCbungen-4"><i class="fas fa-link"></i></a>
+</h3>
+<div id="wie-kommt-dieses-bild-zustande" class="section level4" number="6.19.1.1">
+<h4>
+<span class="header-section-number">6.19.1.1</span> Wie kommt dieses Bild zustande?<a class="anchor" aria-label="anchor" href="#wie-kommt-dieses-bild-zustande"><i class="fas fa-link"></i></a>
+</h4>
+<p>Erläutern Sie, wie das Bild erstellt wird, speziell die for-Schleife:</p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="visualisierung-1.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb69-2"><a href="visualisierung-1.html#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb69-3"><a href="visualisierung-1.html#cb69-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-4"><a href="visualisierung-1.html#cb69-4" aria-hidden="true" tabindex="-1"></a>img<span class="op">=</span> np.ones((<span class="dv">200</span>, <span class="dv">200</span>))</span>
+<span id="cb69-5"><a href="visualisierung-1.html#cb69-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-6"><a href="visualisierung-1.html#cb69-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">200</span>):</span>
+<span id="cb69-7"><a href="visualisierung-1.html#cb69-7" aria-hidden="true" tabindex="-1"></a>  img[:,col] <span class="op">=</span> col</span>
+<span id="cb69-8"><a href="visualisierung-1.html#cb69-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-9"><a href="visualisierung-1.html#cb69-9" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span> (<span class="dv">9</span>,<span class="dv">9</span>))</span>
+<span id="cb69-10"><a href="visualisierung-1.html#cb69-10" aria-hidden="true" tabindex="-1"></a>plt.imshow( img, cmap<span class="op">=</span> plt.get_cmap(<span class="st">'gray'</span>), vmin<span class="op">=</span><span class="dv">0</span>, vmax<span class="op">=</span><span class="dv">200</span>)</span></code></pre></div>
+<p>Ausgabe:</p>
+<div class="figure">
+<img src="readme.assets/image-20211210112001756.png" alt=""><p class="caption">image-20211210112001756</p>
+</div>
+</div>
+<div id="erklären-sie-die-ausgabe-dieses-programms" class="section level4" number="6.19.1.2">
+<h4>
+<span class="header-section-number">6.19.1.2</span> Erklären sie die Ausgabe dieses Programms:<a class="anchor" aria-label="anchor" href="#erkl%C3%A4ren-sie-die-ausgabe-dieses-programms"><i class="fas fa-link"></i></a>
+</h4>
+<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+img = np.random.normal(0.5, 0.1, 200*200*3).reshape(200,200,3)
+plt.figure(figsize= (9,9))
+plt.imshow( img  )</code></pre>
+<p>Ausgabe:</p>
+<div class="figure">
+<img src="readme.assets/image-20211210113514004.png" alt=""><p class="caption">image-20211210113514004</p>
+</div>
+</div>
+</div>
+</div>
+<div id="sandbox" class="section level2" number="6.20">
+<h2>
+<span class="header-section-number">6.20</span> Sandbox<a class="anchor" aria-label="anchor" href="#sandbox"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="alle-farben" class="section level2" number="6.21">
+<h2>
+<span class="header-section-number">6.21</span> Alle Farben<a class="anchor" aria-label="anchor" href="#alle-farben"><i class="fas fa-link"></i></a>
+</h2>
+<p>Folgendes Programm gibt alle Farben mit Farbnamen aus:</p>
+<pre><code>from matplotlib.patches import Rectangle
+import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+
+
+def plot_colortable(colors, title, sort_colors=True, emptycols=0):
+
+    cell_width = 212
+    cell_height = 22
+    swatch_width = 48
+    margin = 12
+    topmargin = 40
+
+    # Sort colors by hue, saturation, value and name.
+    if sort_colors is True:
+        by_hsv = sorted((tuple(mcolors.rgb_to_hsv(mcolors.to_rgb(color))),
+                         name)
+                        for name, color in colors.items())
+        names = [name for hsv, name in by_hsv]
+    else:
+        names = list(colors)
+
+    n = len(names)
+    ncols = 4 - emptycols
+    nrows = n // ncols + int(n % ncols &gt; 0)
+
+    width = cell_width * 4 + 2 * margin
+    height = cell_height * nrows + margin + topmargin
+    dpi = 72
+
+    fig, ax = plt.subplots(figsize=(width / dpi, height / dpi), dpi=dpi)
+    fig.subplots_adjust(margin/width, margin/height,
+                        (width-margin)/width, (height-topmargin)/height)
+    ax.set_xlim(0, cell_width * 4)
+    ax.set_ylim(cell_height * (nrows-0.5), -cell_height/2.)
+    ax.yaxis.set_visible(False)
+    ax.xaxis.set_visible(False)
+    ax.set_axis_off()
+    ax.set_title(title, fontsize=24, loc="left", pad=10)
+
+    for i, name in enumerate(names):
+        row = i % nrows
+        col = i // nrows
+        y = row * cell_height
+
+        swatch_start_x = cell_width * col
+        text_pos_x = cell_width * col + swatch_width + 7
+
+        ax.text(text_pos_x, y, name, fontsize=14,
+                horizontalalignment='left',
+                verticalalignment='center')
+
+        ax.add_patch(
+            Rectangle(xy=(swatch_start_x, y-9), width=swatch_width,
+                      height=18, facecolor=colors[name], edgecolor='0.7')
+        )
+
+    return fig
+
+plot_colortable(mcolors.BASE_COLORS, "Base Colors",
+                sort_colors=False, emptycols=1)
+plot_colortable(mcolors.TABLEAU_COLORS, "Tableau Palette",
+                sort_colors=False, emptycols=2)
+
+plot_colortable(mcolors.CSS4_COLORS, "CSS Colors")
+
+# Optionally plot the XKCD colors (Caution: will produce large figure)
+# xkcd_fig = plot_colortable(mcolors.XKCD_COLORS, "XKCD Colors")
+# xkcd_fig.savefig("XKCD_Colors.png")
+
+plt.show()</code></pre>
+</div>
+<div id="lösungen" class="section level2" number="6.22">
+<h2>
+<span class="header-section-number">6.22</span> Lösungen<a class="anchor" aria-label="anchor" href="#l%C3%B6sungen"><i class="fas fa-link"></i></a>
+</h2>
+<div id="visualisierung-1-1" class="section level3" number="6.22.1">
+<h3>
+<span class="header-section-number">6.22.1</span> Visualisierung 1<a class="anchor" aria-label="anchor" href="#visualisierung-1-1"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb72"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb72-1"><a href="visualisierung-1.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb72-2"><a href="visualisierung-1.html#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb72-3"><a href="visualisierung-1.html#cb72-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb72-4"><a href="visualisierung-1.html#cb72-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-5"><a href="visualisierung-1.html#cb72-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">40</span>)</span>
+<span id="cb72-6"><a href="visualisierung-1.html#cb72-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-7"><a href="visualisierung-1.html#cb72-7" aria-hidden="true" tabindex="-1"></a>fig,ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">9</span>))</span>
+<span id="cb72-8"><a href="visualisierung-1.html#cb72-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-9"><a href="visualisierung-1.html#cb72-9" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Sinus"</span>) </span>
+<span id="cb72-10"><a href="visualisierung-1.html#cb72-10" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
+<span id="cb72-11"><a href="visualisierung-1.html#cb72-11" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"sin(x)"</span>)</span>
+<span id="cb72-12"><a href="visualisierung-1.html#cb72-12" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">"equal"</span>)</span>
+<span id="cb72-13"><a href="visualisierung-1.html#cb72-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-14"><a href="visualisierung-1.html#cb72-14" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>()</span>
+<span id="cb72-15"><a href="visualisierung-1.html#cb72-15" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x<span class="op">=</span>x, y<span class="op">=</span> np.sin(x), color<span class="op">=</span><span class="st">"blue"</span>, label<span class="op">=</span><span class="st">"sin(x)"</span>)</span></code></pre></div>
+</div>
+<div id="visualisierung-2" class="section level3" number="6.22.2">
+<h3>
+<span class="header-section-number">6.22.2</span> Visualisierung 2<a class="anchor" aria-label="anchor" href="#visualisierung-2"><i class="fas fa-link"></i></a>
+</h3>
+<div id="section" class="section level4" number="6.22.2.1">
+<h4>
+<span class="header-section-number">6.22.2.1</span> 2.1<a class="anchor" aria-label="anchor" href="#section"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="visualisierung-1.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb73-2"><a href="visualisierung-1.html#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb73-3"><a href="visualisierung-1.html#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb73-4"><a href="visualisierung-1.html#cb73-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-5"><a href="visualisierung-1.html#cb73-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.random(<span class="dv">50</span>)</span>
+<span id="cb73-6"><a href="visualisierung-1.html#cb73-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.random(<span class="dv">50</span>)</span>
+<span id="cb73-7"><a href="visualisierung-1.html#cb73-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-8"><a href="visualisierung-1.html#cb73-8" aria-hidden="true" tabindex="-1"></a>fig,ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">9</span>))</span>
+<span id="cb73-9"><a href="visualisierung-1.html#cb73-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-10"><a href="visualisierung-1.html#cb73-10" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>()</span>
+<span id="cb73-11"><a href="visualisierung-1.html#cb73-11" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Random Points"</span>) </span>
+<span id="cb73-12"><a href="visualisierung-1.html#cb73-12" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
+<span id="cb73-13"><a href="visualisierung-1.html#cb73-13" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"y"</span>)</span>
+<span id="cb73-14"><a href="visualisierung-1.html#cb73-14" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">"equal"</span>)</span>
+<span id="cb73-15"><a href="visualisierung-1.html#cb73-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-16"><a href="visualisierung-1.html#cb73-16" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span>x, y<span class="op">=</span>y, label<span class="op">=</span><span class="st">"Random Points"</span>)</span></code></pre></div>
+</div>
+<div id="section-1" class="section level4" number="6.22.2.2">
+<h4>
+<span class="header-section-number">6.22.2.2</span> 2.3<a class="anchor" aria-label="anchor" href="#section-1"><i class="fas fa-link"></i></a>
+</h4>
+<pre><code>import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+x = np.random.normal(0,1,2000)
+y = np.random.normal(0,1,2000)
+
+fig,ax = plt.subplots(figsize=(9, 9))
+
+sns.set()
+ax.set_title("Random Points") 
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_aspect("equal")
+
+sns.scatterplot(x=x, y=y, label="Random Points")</code></pre>
+</div>
+<div id="section-2" class="section level4" number="6.22.2.3">
+<h4>
+<span class="header-section-number">6.22.2.3</span> 2.4<a class="anchor" aria-label="anchor" href="#section-2"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb75"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="visualisierung-1.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb75-2"><a href="visualisierung-1.html#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb75-3"><a href="visualisierung-1.html#cb75-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb75-4"><a href="visualisierung-1.html#cb75-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-5"><a href="visualisierung-1.html#cb75-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.normal(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">20000</span>)</span>
+<span id="cb75-6"><a href="visualisierung-1.html#cb75-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-7"><a href="visualisierung-1.html#cb75-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-8"><a href="visualisierung-1.html#cb75-8" aria-hidden="true" tabindex="-1"></a>fig,ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
+<span id="cb75-9"><a href="visualisierung-1.html#cb75-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-10"><a href="visualisierung-1.html#cb75-10" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>()</span>
+<span id="cb75-11"><a href="visualisierung-1.html#cb75-11" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Histogramm der Normalverteilung"</span>) </span>
+<span id="cb75-12"><a href="visualisierung-1.html#cb75-12" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"x"</span>)</span>
+<span id="cb75-13"><a href="visualisierung-1.html#cb75-13" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Count"</span>)</span>
+<span id="cb75-14"><a href="visualisierung-1.html#cb75-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-15"><a href="visualisierung-1.html#cb75-15" aria-hidden="true" tabindex="-1"></a>sns.histplot(x<span class="op">=</span>x)</span></code></pre></div>
+
+</div>
+</div>
+</div>
+</div>
+<div class="footnotes footnotes-end-of-document">
+<hr>
+<ol>
+<li id="fn1"><p>sing. Datum<a href="daten.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>siehe z.B. <a href="https://en.wikipedia.org/wiki/Iris_flower_data_set" class="uri">https://en.wikipedia.org/wiki/Iris_flower_data_set</a><a href="daten.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Quelle: <a href="https://medium.com/greyatom/using-clustering-for-feature-engineering-on-the-iris-dataset-f438366d0b4b" class="uri">https://medium.com/greyatom/using-clustering-for-feature-engineering-on-the-iris-dataset-f438366d0b4b</a><a href="daten.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Dabei ist noch zu konkretisieren, wie wir die Ähnlichkeit der Werte messen<a href="daten.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>Es gibt natürlich noch ein paar mehr Arten von Zahlen, die wir aber hier nicht brauchen<a href="daten.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p> <span class="math inline">\((\frac{1}{n} \sum x_i^p)^\frac{1}{p}\)</span><a href="daten.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>Eine Python-Library umfasst vorgefertigte Programmen, die von Programmieren genutzt werden, um Programme schneller und sicherer zu erstellen. <a href="numpy-arrays.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>Genaugenommen nur die ersten vier Spalten. Wir lassen die Spalte <code>class</code> weg.<a href="numpy-arrays.html#fnref8" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="visualisierung.html"><span class="header-section-number">5</span> Visualisierung</a></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#visualisierung-1"><span class="header-section-number">6</span> Visualisierung</a></li>
+<li><a class="nav-link" href="#matplotlib"><span class="header-section-number">6.1</span> Matplotlib</a></li>
+<li><a class="nav-link" href="#scatterplot"><span class="header-section-number">6.2</span> Scatterplot</a></li>
+<li><a class="nav-link" href="#liniendiagramme"><span class="header-section-number">6.3</span> Liniendiagramme</a></li>
+<li><a class="nav-link" href="#barplot"><span class="header-section-number">6.4</span> Barplot</a></li>
+<li><a class="nav-link" href="#histogramme"><span class="header-section-number">6.5</span> Histogramme</a></li>
+<li><a class="nav-link" href="#boxplots"><span class="header-section-number">6.6</span> Boxplots</a></li>
+<li><a class="nav-link" href="#%C3%BCbungen-3"><span class="header-section-number">6.7</span> Übungen</a></li>
+<li><a class="nav-link" href="#visualisierungs%C3%BCbung-1"><span class="header-section-number">6.8</span> Visualisierungsübung 1</a></li>
+<li><a class="nav-link" href="#visualisierungs%C3%BCbung-2"><span class="header-section-number">6.9</span> Visualisierungsübung 2</a></li>
+<li><a class="nav-link" href="#plots-f%C3%BCr-iris"><span class="header-section-number">6.10</span> Plots für Iris</a></li>
+<li><a class="nav-link" href="#laden-der-daten"><span class="header-section-number">6.11</span> Laden der Daten</a></li>
+<li><a class="nav-link" href="#histogramm-f%C3%BCr-ein-feature"><span class="header-section-number">6.12</span> Histogramm für ein Feature</a></li>
+<li><a class="nav-link" href="#relation-plots"><span class="header-section-number">6.13</span> Relation-Plots</a></li>
+<li><a class="nav-link" href="#pairplots"><span class="header-section-number">6.14</span> Pairplots</a></li>
+<li><a class="nav-link" href="#beispiele-bilder"><span class="header-section-number">6.15</span> Beispiele: Bilder</a></li>
+<li><a class="nav-link" href="#grauwert-bilder-als-nxm-matrix"><span class="header-section-number">6.16</span> Grauwert-Bilder als nxm Matrix</a></li>
+<li><a class="nav-link" href="#farbbilder-aus-datei-laden"><span class="header-section-number">6.17</span> Farbbilder aus Datei laden</a></li>
+<li><a class="nav-link" href="#einfache-farbbilder-erzeugen"><span class="header-section-number">6.18</span> Einfache Farbbilder erzeugen</a></li>
+<li>
+<a class="nav-link" href="#komplett-zuf%C3%A4lliges-farbbild"><span class="header-section-number">6.19</span> Komplett zufälliges Farbbild</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#%C3%BCbungen-4"><span class="header-section-number">6.19.1</span> Übungen</a></li></ul>
+</li>
+<li><a class="nav-link" href="#sandbox"><span class="header-section-number">6.20</span> Sandbox</a></li>
+<li><a class="nav-link" href="#alle-farben"><span class="header-section-number">6.21</span> Alle Farben</a></li>
+<li>
+<a class="nav-link" href="#l%C3%B6sungen"><span class="header-section-number">6.22</span> Lösungen</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#visualisierung-1-1"><span class="header-section-number">6.22.1</span> Visualisierung 1</a></li>
+<li><a class="nav-link" href="#visualisierung-2"><span class="header-section-number">6.22.2</span> Visualisierung 2</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/06-visualisierung.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/06-visualisierung.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Data Science &amp; Machine Learning</strong>" was written by Dieter Greipl. It was last built on 2022-03-15.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

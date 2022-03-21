@@ -4,28 +4,27 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 5 Numpy-Arrays | Data Science &amp; Machine Learning</title>
+<title>Chapter 4 Numpy-Arrays | Data Science &amp; Machine Learning</title>
 <meta name="author" content="Dieter Greipl">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 5 Numpy-Arrays | Data Science &amp; Machine Learning">
+<meta property="og:title" content="Chapter 4 Numpy-Arrays | Data Science &amp; Machine Learning">
 <meta property="og:type" content="book">
 <meta property="og:image" content="/assets/x.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 5 Numpy-Arrays | Data Science &amp; Machine Learning">
+<meta name="twitter:title" content="Chapter 4 Numpy-Arrays | Data Science &amp; Machine Learning">
 <meta name="twitter:image" content="/assets/x.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Sen-0.4.0/font.css" rel="stylesheet">
-<script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><style>
     #content {
         font-size: 0.95rem;
     }
     </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="bs4_style.css">
-<meta name="description" content="5.1 Wofür brauchen wir Numpy? Numpy ist eine Python-Library7 (Bibliothek von Funktionen) für die effiziente Erzeugung, Berechnung und Bearbeitung von Zahlenstrukturen, zum Beispiel Vektoren,...">
-<meta property="og:description" content="5.1 Wofür brauchen wir Numpy? Numpy ist eine Python-Library7 (Bibliothek von Funktionen) für die effiziente Erzeugung, Berechnung und Bearbeitung von Zahlenstrukturen, zum Beispiel Vektoren,...">
-<meta name="twitter:description" content="5.1 Wofür brauchen wir Numpy? Numpy ist eine Python-Library7 (Bibliothek von Funktionen) für die effiziente Erzeugung, Berechnung und Bearbeitung von Zahlenstrukturen, zum Beispiel Vektoren,...">
+<meta name="description" content="4.1 Wofür brauchen wir Numpy? Numpy ist eine Python-Library7 (Bibliothek von Funktionen) für die effiziente Erzeugung, Berechnung und Bearbeitung von Daten, insbesondere numerischen Daten. Wir...">
+<meta property="og:description" content="4.1 Wofür brauchen wir Numpy? Numpy ist eine Python-Library7 (Bibliothek von Funktionen) für die effiziente Erzeugung, Berechnung und Bearbeitung von Daten, insbesondere numerischen Daten. Wir...">
+<meta name="twitter:description" content="4.1 Wofür brauchen wir Numpy? Numpy ist eine Python-Library7 (Bibliothek von Funktionen) für die effiziente Erzeugung, Berechnung und Bearbeitung von Daten, insbesondere numerischen Daten. Wir...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -49,48 +48,49 @@
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Einführung</a></li>
 <li class="book-part">Teil A: Grundlagen</li>
-<li><a class="" href="python---quickstart.html"><span class="header-section-number">2</span> Python - Quickstart</a></li>
-<li><a class="" href="daten.html"><span class="header-section-number">3</span> Daten</a></li>
-<li><a class="" href="lineare-algebra.html"><span class="header-section-number">4</span> Lineare Algebra</a></li>
-<li><a class="active" href="numpy-arrays.html"><span class="header-section-number">5</span> Numpy-Arrays</a></li>
+<li><a class="" href="python---quickstart.html"><span class="header-section-number">1</span> Python - Quickstart</a></li>
+<li><a class="" href="daten.html"><span class="header-section-number">2</span> Daten</a></li>
+<li><a class="" href="lineare-algebra.html"><span class="header-section-number">3</span> Lineare Algebra</a></li>
+<li><a class="active" href="numpy-arrays.html"><span class="header-section-number">4</span> Numpy-Arrays</a></li>
+<li><a class="" href="dataframes.html"><span class="header-section-number">5</span> Dataframes</a></li>
 </ul>
 
         <div class="book-extra">
-          
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="numpy-arrays" class="section level1" number="5">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="numpy-arrays" class="section level1" number="4">
 <h1>
-<span class="header-section-number">5</span> Numpy-Arrays<a class="anchor" aria-label="anchor" href="#numpy-arrays"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4</span> Numpy-Arrays<a class="anchor" aria-label="anchor" href="#numpy-arrays"><i class="fas fa-link"></i></a>
 </h1>
-<div id="wofür-brauchen-wir-numpy" class="section level2" number="5.1">
+<div id="wofür-brauchen-wir-numpy" class="section level2" number="4.1">
 <h2>
-<span class="header-section-number">5.1</span> Wofür brauchen wir Numpy?<a class="anchor" aria-label="anchor" href="#wof%C3%BCr-brauchen-wir-numpy"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.1</span> Wofür brauchen wir Numpy?<a class="anchor" aria-label="anchor" href="#wof%C3%BCr-brauchen-wir-numpy"><i class="fas fa-link"></i></a>
 </h2>
-<p>Numpy ist eine Python-Library<a href="numpy-arrays.html#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> (Bibliothek von Funktionen) für die effiziente Erzeugung, Berechnung und Bearbeitung von Zahlenstrukturen, zum Beispiel Vektoren, Matrizen oder Tensoren.</p>
+<p>Numpy ist eine Python-Library<a href="dataframes.html#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> (Bibliothek von Funktionen) für die effiziente Erzeugung, Berechnung und Bearbeitung von Daten, insbesondere numerischen Daten. Wir nutzen Numpy für den Umgang mit Vektoren, Matrizen oder Tensoren.<a href="dataframes.html#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></p>
 <p>Wir werden Numpy nutzen, um die Datensätze für maschinelles Lernen zu bearbeiten. Eine umfangreiche und behutsame Einführung finden sie unter <a href="https://www.w3schools.com/python/numpy/">https://www.w3schools.com/python/numpy/</a>. Wir besprechen in diesem Abschnitt nur die für unsere Inhalte relevanten Teile.</p>
 <div class="rmdnote">
 <p><strong>Wichtig:</strong> Beginnen Sie jeden Programmblock, in dem sie numpy-Funktionen brauchen, mit der Zeile <code>import numpy as np</code></p>
 </div>
 </div>
-<div id="numpy-arrays-1" class="section level2" number="5.2">
+<div id="numpy-arrays-1" class="section level2" number="4.2">
 <h2>
-<span class="header-section-number">5.2</span> Numpy-Arrays<a class="anchor" aria-label="anchor" href="#numpy-arrays-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2</span> Numpy-Arrays<a class="anchor" aria-label="anchor" href="#numpy-arrays-1"><i class="fas fa-link"></i></a>
 </h2>
 </div>
-<div id="vektor-mit-numpy" class="section level2" number="5.3">
+<div id="vektor-mit-numpy" class="section level2" number="4.3">
 <h2>
-<span class="header-section-number">5.3</span> Vektor mit Numpy<a class="anchor" aria-label="anchor" href="#vektor-mit-numpy"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3</span> Vektor mit Numpy<a class="anchor" aria-label="anchor" href="#vektor-mit-numpy"><i class="fas fa-link"></i></a>
 </h2>
 <p>Folgende Code zeigt, wie der erste Datensatz <span class="math inline">\((5.1, 3.5, 1.4, 0.2) \in \mathbb{R}^4\)</span> aus dem Iris-Dataset als Vektor
 <span class="math display">\[
 \mathbf{x} = (5.1, 3.5, 1.4, 0.2) \in \mathbb{R}^4
 \]</span>
-in einer Variable mit dem Namen <code>x</code> erzeugt wird<a href="numpy-arrays.html#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>.</p>
-<div id="beispiel" class="section level3" number="5.3.1">
+in einer Variable mit dem Namen <code>x</code> erzeugt wird<a href="dataframes.html#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>.</p>
+<div id="beispiel" class="section level3" number="4.3.1">
 <h3>
-<span class="header-section-number">5.3.1</span> Beispiel<a class="anchor" aria-label="anchor" href="#beispiel"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.1</span> Beispiel<a class="anchor" aria-label="anchor" href="#beispiel"><i class="fas fa-link"></i></a>
 </h3>
 <div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="numpy-arrays.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb34-2"><a href="numpy-arrays.html#cb34-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array( [<span class="fl">5.1</span>, <span class="fl">3.5</span>, <span class="fl">1.4</span>, <span class="fl">0.2</span>]) </span>
@@ -101,9 +101,9 @@ in einer Variable mit dem Namen <code>x</code> erzeugt wird<a href="numpy-arrays
 #&gt; &lt;class 'numpy.ndarray'&gt;</code></pre>
 <p>Wir werden sehen, dass wir den aus der Mathematik gewohnten Umgang mit Vektoren (und Matrizen) einfach in Numpy übertragen können.</p>
 </div>
-<div id="shape-dimension" class="section level3" number="5.3.2">
+<div id="shape-dimension" class="section level3" number="4.3.2">
 <h3>
-<span class="header-section-number">5.3.2</span> Shape (Dimension)<a class="anchor" aria-label="anchor" href="#shape-dimension"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.2</span> Shape (Dimension)<a class="anchor" aria-label="anchor" href="#shape-dimension"><i class="fas fa-link"></i></a>
 </h3>
 <p>Das Attribut <code>shape</code> liefert die Dimension eines Arrays.</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="numpy-arrays.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -112,9 +112,9 @@ in einer Variable mit dem Namen <code>x</code> erzeugt wird<a href="numpy-arrays
 <p>Die Ausgabe <code>(4,)</code> bedeutet, dass die Struktur aus 4 Zahlen entlang einer Dimension besteht. (Das wird im nachfolgenden Abschnitt spannender.)</p>
 <pre><code>#&gt; (4,)</code></pre>
 </div>
-<div id="zugriff-auf-elemente" class="section level3" number="5.3.3">
+<div id="zugriff-auf-elemente" class="section level3" number="4.3.3">
 <h3>
-<span class="header-section-number">5.3.3</span> Zugriff auf Elemente<a class="anchor" aria-label="anchor" href="#zugriff-auf-elemente"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.3</span> Zugriff auf Elemente<a class="anchor" aria-label="anchor" href="#zugriff-auf-elemente"><i class="fas fa-link"></i></a>
 </h3>
 <p>Für einen Vektor <span class="math inline">\(\bf{x} \in \mathbb{R}^n\)</span> nehmen wir auf die einzelnen Werte mittels <span class="math inline">\(x = (x_1, ..., x_n)\)</span> durch Verwendung eines tiefgestellten Index Bezug. Für <span class="math inline">\(\mathbf{x} = (5.1, 3.5, 1.4, 0.2) \in \mathbb{R}^4\)</span> ist also <span class="math inline">\(x_1 = 5.1\)</span>. In Numpy machen wir das analog, <strong>starten die Nummerierung jedoch bei Null</strong>, wie folgendes Beispiel zeigt. Beachten sie die Analogie zu Listen in Abschnitt  .</p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="numpy-arrays.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -124,9 +124,9 @@ in einer Variable mit dem Namen <code>x</code> erzeugt wird<a href="numpy-arrays
 <pre><code>#&gt; 5.1</code></pre>
 <p><strong>Übung: </strong>Geben sie das letzte Element mit dem Wert 0.2 aus.</p>
 </div>
-<div id="werte-verändern" class="section level3" number="5.3.4">
+<div id="werte-verändern" class="section level3" number="4.3.4">
 <h3>
-<span class="header-section-number">5.3.4</span> Werte verändern<a class="anchor" aria-label="anchor" href="#werte-ver%C3%A4ndern"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.4</span> Werte verändern<a class="anchor" aria-label="anchor" href="#werte-ver%C3%A4ndern"><i class="fas fa-link"></i></a>
 </h3>
 <p>Mit der Verwendung des Index können wir einzelne Einträge auch verändern. Wir sehen behandeln dazu den Ausdruck x[0] einfach als Variable und verwenden eine Wertzuweisung.</p>
 <div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="numpy-arrays.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -136,9 +136,9 @@ in einer Variable mit dem Namen <code>x</code> erzeugt wird<a href="numpy-arrays
 <p>Ausgabe:</p>
 <pre><code>#&gt; [-3.   3.5  1.4  0.2]</code></pre>
 </div>
-<div id="skalare-multiplikation-und-addition" class="section level3" number="5.3.5">
+<div id="skalare-multiplikation-und-addition" class="section level3" number="4.3.5">
 <h3>
-<span class="header-section-number">5.3.5</span> Skalare Multiplikation und Addition<a class="anchor" aria-label="anchor" href="#skalare-multiplikation-und-addition"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.5</span> Skalare Multiplikation und Addition<a class="anchor" aria-label="anchor" href="#skalare-multiplikation-und-addition"><i class="fas fa-link"></i></a>
 </h3>
 <div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="numpy-arrays.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb42-2"><a href="numpy-arrays.html#cb42-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">0</span>])</span>
@@ -151,9 +151,9 @@ in einer Variable mit dem Namen <code>x</code> erzeugt wird<a href="numpy-arrays
 #&gt; [ 2  4 10  0]
 #&gt; [0 4 8 0]</code></pre>
 </div>
-<div id="neue-rechenarten" class="section level3" number="5.3.6">
+<div id="neue-rechenarten" class="section level3" number="4.3.6">
 <h3>
-<span class="header-section-number">5.3.6</span> Neue Rechenarten<a class="anchor" aria-label="anchor" href="#neue-rechenarten"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.6</span> Neue Rechenarten<a class="anchor" aria-label="anchor" href="#neue-rechenarten"><i class="fas fa-link"></i></a>
 </h3>
 <div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="numpy-arrays.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb44-2"><a href="numpy-arrays.html#cb44-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">0</span>])</span>
@@ -166,14 +166,14 @@ in einer Variable mit dem Namen <code>x</code> erzeugt wird<a href="numpy-arrays
 #&gt; [1 0 9 0]</code></pre>
 </div>
 </div>
-<div id="matrix-mit-numpy" class="section level2" number="5.4">
+<div id="matrix-mit-numpy" class="section level2" number="4.4">
 <h2>
-<span class="header-section-number">5.4</span> Matrix mit Numpy<a class="anchor" aria-label="anchor" href="#matrix-mit-numpy"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4</span> Matrix mit Numpy<a class="anchor" aria-label="anchor" href="#matrix-mit-numpy"><i class="fas fa-link"></i></a>
 </h2>
 <p>Matrizen werden in Numpy als eine Ansammlung von Zeilenvektoren aufgebaut!</p>
-<div id="beispiel-1" class="section level3" number="5.4.1">
+<div id="beispiel-1" class="section level3" number="4.4.1">
 <h3>
-<span class="header-section-number">5.4.1</span> Beispiel<a class="anchor" aria-label="anchor" href="#beispiel-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4.1</span> Beispiel<a class="anchor" aria-label="anchor" href="#beispiel-1"><i class="fas fa-link"></i></a>
 </h3>
 <div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="numpy-arrays.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb46-2"><a href="numpy-arrays.html#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -190,9 +190,9 @@ in einer Variable mit dem Namen <code>x</code> erzeugt wird<a href="numpy-arrays
 #&gt; 2</code></pre>
 <p>Die Indizierung der Element funktioniert erwartungsgemäß, allerdings wird mit der Zählung bei Null begonnen!</p>
 </div>
-<div id="shape-dimension-1" class="section level3" number="5.4.2">
+<div id="shape-dimension-1" class="section level3" number="4.4.2">
 <h3>
-<span class="header-section-number">5.4.2</span> Shape (Dimension)<a class="anchor" aria-label="anchor" href="#shape-dimension-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4.2</span> Shape (Dimension)<a class="anchor" aria-label="anchor" href="#shape-dimension-1"><i class="fas fa-link"></i></a>
 </h3>
 <p>Eine Matrix hat eine Anzahl von Zeilen und Spalten. Wir verwenden wie bei Vektoren <code>shape</code>, um die Dimension zu erfahren</p>
 <div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="numpy-arrays.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -203,9 +203,9 @@ in einer Variable mit dem Namen <code>x</code> erzeugt wird<a href="numpy-arrays
 <pre><code>#&gt; (4, 2)</code></pre>
 <p>Die Ausgabe (4,2) besagt, dass die Matrix vier Zeilen und zwei Spalten besitzt. Allgemein gesagt, dass 4 Werte entlang der ersten Dimension und 2 Werte entlang der zweiten Dimension angeordnet werden.</p>
 </div>
-<div id="skalare-multiplikation-und-addition-1" class="section level3" number="5.4.3">
+<div id="skalare-multiplikation-und-addition-1" class="section level3" number="4.4.3">
 <h3>
-<span class="header-section-number">5.4.3</span> Skalare Multiplikation und Addition<a class="anchor" aria-label="anchor" href="#skalare-multiplikation-und-addition-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4.3</span> Skalare Multiplikation und Addition<a class="anchor" aria-label="anchor" href="#skalare-multiplikation-und-addition-1"><i class="fas fa-link"></i></a>
 </h3>
 <div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="numpy-arrays.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb50-2"><a href="numpy-arrays.html#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -224,9 +224,9 @@ in einer Variable mit dem Namen <code>x</code> erzeugt wird<a href="numpy-arrays
 #&gt;  [55 66]
 #&gt;  [77 88]]</code></pre>
 </div>
-<div id="matrixmultiplikation" class="section level3" number="5.4.4">
+<div id="matrixmultiplikation" class="section level3" number="4.4.4">
 <h3>
-<span class="header-section-number">5.4.4</span> Matrixmultiplikation<a class="anchor" aria-label="anchor" href="#matrixmultiplikation"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4.4</span> Matrixmultiplikation<a class="anchor" aria-label="anchor" href="#matrixmultiplikation"><i class="fas fa-link"></i></a>
 </h3>
 <p>Die Matrixmultiplikation erfolgt über den Befehl <code>np.dot</code>. Wir berechnen als Beispiel folgendes Produkt (Immer auf die passenden shapes achten!):</p>
 <p><span class="math display">\[
@@ -246,360 +246,288 @@ Mit Numpy: <code>np.dot()</code></p>
 #&gt;  [ 3  8]
 #&gt;  [ 5 12]]</code></pre>
 </div>
-<div id="übungen-2" class="section level3" number="5.4.5">
+<div id="übungen-2" class="section level3" number="4.4.5">
 <h3>
-<span class="header-section-number">5.4.5</span> Übungen<a class="anchor" aria-label="anchor" href="#%C3%BCbungen-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4.5</span> Übungen<a class="anchor" aria-label="anchor" href="#%C3%BCbungen-2"><i class="fas fa-link"></i></a>
 </h3>
-<p>Lösen sie die Aufgaben aus Abschnitt <a href="lineare-algebra.html#matrix-uebung">4.4</a> mit geeigneten Python-Programmen.</p>
-<!-- 
-
-## Allgemeine Numpy-Arrays
-
-Vektoren und Matrizen über reellen Zahlen lassen sich mit Numpy bequem darstellen. 
-
-#### 1D-Array {-}
-
-Ein Vektor ist eine Struktur mit einer Achse. (Wir vermeiden den Begriff Dimension, weil er für Vektoren bereits belegt ist.) Entsprechend brauchen wir für einen Vektor *einen* Index um einen Wert zu erreichen. Diese Struktur wird in Numpy 1D-Array genannt. Der Shape ist ein Tupel der Länge 1. Der Eintrag sagt uns, wie viele Werte in Achse 0 enthalten sind.
-
-#### 2D-Array {-}
-
-Eine Matrix ist eine Struktur mit zwei Achsen. Entsprechend brauchen wir für eine Matrix *zwei*  Indizes, um einen Wert zu erreichen und für eine Matrix *zwei* Indizes um einen Wert zu erreichen.  Der Shape ist nun ein Tupel der Länge 2. Die Einträge sagen uns, wie viele Werte in Achse 0 und in Achse 1 enthalten sind.
-
-#### 3D-Array {-}
-
-Eine Matrix ist eine Struktur mit drei Achsen. Entsprechend brauchen wir für ein 3D-Array *drei*  Indizes, um einen Wert zu erreichen.  Der Shape ist hier ein Tupel der Länge 3. Die Einträge sagen uns, wie viele Werte in den Achsen 0, 1 und 2 enthalten sind. 
-
-Für uns sind 3D-Arrays relevant, zum Beispiel bei der Verarbeitung von Bildern. Wir werden darauf später noch zurückkommen. 
-
-
-
-![Quelle: https://medium.com/@vyasvivekj/numrical-computing-with-numpy-part-i-399adda460d8](assets/04-numpy.assets/image-20220313164402044.png){width=70%}
-
-Arrays mit mehr Achsen funktionieren analog. Beachten sie, dass die Regeln für skalare Multiplikation gelten, sofern die Shapes indentisch sind!
-
-#### Beispiel {-}
-
-Was gibt folgendes Programm aus?
-
-
-```python
-import numpy as np
-arr = np.array([
+<p>Lösen sie die Aufgaben aus Abschnitt <a href="lineare-algebra.html#matrix-uebung">3.4</a> mit geeigneten Python-Programmen.</p>
+</div>
+</div>
+<div id="allgemeine-numpy-arrays" class="section level2" number="4.5">
+<h2>
+<span class="header-section-number">4.5</span> Allgemeine Numpy-Arrays<a class="anchor" aria-label="anchor" href="#allgemeine-numpy-arrays"><i class="fas fa-link"></i></a>
+</h2>
+<p>Vektoren und Matrizen über reellen Zahlen lassen sich mit Numpy bequem darstellen.</p>
+<div id="d-array" class="section level4 unnumbered">
+<h4>1D-Array<a class="anchor" aria-label="anchor" href="#d-array"><i class="fas fa-link"></i></a>
+</h4>
+<p>Ein Vektor ist eine Struktur mit einer Achse. (Wir vermeiden den Begriff Dimension, weil er für Vektoren bereits belegt ist.) Entsprechend brauchen wir für einen Vektor <em>einen</em> Index um einen Wert zu erreichen. Diese Struktur wird in Numpy 1D-Array genannt. Der Shape ist ein Tupel der Länge 1. Der Eintrag sagt uns, wie viele Werte in Achse 0 enthalten sind.</p>
+</div>
+<div id="d-array-1" class="section level4 unnumbered">
+<h4>2D-Array<a class="anchor" aria-label="anchor" href="#d-array-1"><i class="fas fa-link"></i></a>
+</h4>
+<p>Eine Matrix ist eine Struktur mit zwei Achsen. Entsprechend brauchen wir für eine Matrix <em>zwei</em> Indizes, um einen Wert zu erreichen und für eine Matrix <em>zwei</em> Indizes um einen Wert zu erreichen. Der Shape ist nun ein Tupel der Länge 2. Die Einträge sagen uns, wie viele Werte in Achse 0 und in Achse 1 enthalten sind.</p>
+</div>
+<div id="d-array-2" class="section level4 unnumbered">
+<h4>3D-Array<a class="anchor" aria-label="anchor" href="#d-array-2"><i class="fas fa-link"></i></a>
+</h4>
+<p>Eine Matrix ist eine Struktur mit drei Achsen. Entsprechend brauchen wir für ein 3D-Array <em>drei</em> Indizes, um einen Wert zu erreichen. Der Shape ist hier ein Tupel der Länge 3. Die Einträge sagen uns, wie viele Werte in den Achsen 0, 1 und 2 enthalten sind.</p>
+<p>Für uns sind 3D-Arrays relevant, zum Beispiel bei der Verarbeitung von Bildern. Wir werden darauf später noch zurückkommen.</p>
+<div class="figure">
+<img src="assets/04-numpy.assets/image-20220313164402044.png" style="width:70.0%" alt=""><p class="caption">Quelle: <a href="https://medium.com/@vyasvivekj/numrical-computing-with-numpy-part-i-399adda460d8" class="uri">https://medium.com/@vyasvivekj/numrical-computing-with-numpy-part-i-399adda460d8</a></p>
+</div>
+<p>Arrays mit mehr Achsen funktionieren analog. Beachten sie, dass die Regeln für skalare Multiplikation gelten, sofern die Shapes indentisch sind!</p>
+</div>
+<div id="beispiel-2" class="section level4 unnumbered">
+<h4>Beispiel<a class="anchor" aria-label="anchor" href="#beispiel-2"><i class="fas fa-link"></i></a>
+</h4>
+<p>Was gibt folgendes Programm aus?</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="numpy-arrays.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb54-2"><a href="numpy-arrays.html#cb54-2" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([</span>
+<span id="cb54-3"><a href="numpy-arrays.html#cb54-3" aria-hidden="true" tabindex="-1"></a>         [ [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>] ], </span>
+<span id="cb54-4"><a href="numpy-arrays.html#cb54-4" aria-hidden="true" tabindex="-1"></a>         [ [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>], [<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>]]</span>
+<span id="cb54-5"><a href="numpy-arrays.html#cb54-5" aria-hidden="true" tabindex="-1"></a>         ])</span>
+<span id="cb54-6"><a href="numpy-arrays.html#cb54-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(arr[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>])</span></code></pre></div>
+<p>Etwas einfacher sollte es sein, wenn sie die Erzeugung von arr etwas anders schreiben:</p>
+<pre><code>arr = np.array([
          [ [1, 2, 3], [4, 5, 6] ], 
          [ [7, 8, 9], [10, 11, 12]]
-         ])
-print(arr[0, 1, 2])
-```
-Etwas einfacher sollte es sein, wenn sie die Erzeugung von arr etwas anders schreiben:
-
-```
-arr = np.array([
-         [ [1, 2, 3], [4, 5, 6] ], 
-         [ [7, 8, 9], [10, 11, 12]]
-         ])
-```
-
-
-
-## Arrays erzeugen 
-
-Bisher mussten wir Array-Werte eintippen. In diesem Abschnitt lernen wir Funktionen kennen, um Arrays mit beliebigem Shape zu erzeugen
-
-### `np.ones() und np.zeros()`
-
-
-```python
-import numpy as np
-v = np.ones( (2,3) )
-print( v )
-```
-Ausgabe:
-
-```
-#> [[1. 1. 1.]
-#>  [1. 1. 1.]]
-```
-
-### `np.arange`()
-
-Mit `np.arange` erzeugen wir automatisch Vektoren, die wir häufiger brauchen. Beschäftigen Sie sich mit der Ausgabe und experimentieren sie etwas, dann wird die jeweilige Funktion recht schnell klar.
-
-
-```python
-import numpy as np
-x = np.arange(1,2,0.1)
-print( x )
-print( x[2] )
-print( len(x) )
-print ( type(x) )
-```
-Ausgabe:
-
-```
-#> [1.  1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9]
-#> 1.2000000000000002
-#> 10
-#> <class 'numpy.ndarray'>
-```
-
-
-###  `np.linspace`()
-Auch hier ist die Funktionsweise recht offensichtlich.. Sie ist allerdings mit etwas Vorsicht zu genießen...
-
-
-```python
-import numpy as np
-x = np.linspace(0,1,4);
-print(x)
-print( x.shape )
-```
-Ausgabe:
-
-```
-#> [0.         0.33333333 0.66666667 1.        ]
-#> (4,)
-```
-
-
-
-## Operationen auf Arrays
-
-### Aggregierende Operationen
-
-```python
-import numpy as np
-x=np.array([1,2,3,4])
-print( x.min() )
-print( x.max() )
-print( x.mean() )
-print( x.sum() )
-```
-Ausgabe:
-
-```
-#> 1
-#> 4
-#> 2.5
-#> 10
-```
-
-### Elementweise Operationen
-
- Nachfolgendes Beispiel zeigt ausgewählte Operationen. Beachten Sie diese Operationen so im Mathe-Unterricht nicht gelernt haben. Sie sind jedoch recht hilfreich!
-
-
-```python
-import numpy as np
-x = np.array([1, 4, 9, 0])
-y = np.array([1, 0, 1, 0])
-
-print (x+1)
-print(x*y)
-print (np.sqrt(x))
-print (np.sin(x))
-```
-Ausgabe:
-
-```
-#> [ 2  5 10  1]
-#> [1 0 9 0]
-#> [1. 2. 3. 0.]
-#> [ 0.84147098 -0.7568025   0.41211849  0.        ]
-```
-
-
-
-
-
-
-## Zufallszahlen
-
-### Gleichverteilung
-Nachfolgende Beispiele erzeugen Gleichverteilte Zufallszahlen zwischen 3 und 4.
-
-
-```python
-import numpy as np
-x = np.random.uniform(3,4)
-print(x)
-x = np.random.uniform(3,4, size=(5))
-print(x)
-x = np.random.uniform(3,4, size=(5,2))
-print(x)
-```
-Ausgabe:
-
-```
-#> 3.8556061638064527
-#> [3.53070834 3.32585772 3.35963682 3.30269087 3.88104267]
-#> [[3.51974204 3.83503631]
-#>  [3.76445328 3.87222494]
-#>  [3.18342405 3.52374074]
-#>  [3.30621596 3.30677262]
-#>  [3.49238776 3.32900326]]
-```
-
-### Normalverteilung
-
-Die Kenntnis der Standardnormalverteilung wird vorausgesetzt. 
-
-
-```python
-import numpy as np
-x = np.random.normal()
-print(x)
-mu = 5
-sigma = 1
-x = np.random.uniform(mu, sigma, size=(5))
-print(x)
-x = np.random.uniform(mu, sigma, size=(5,2))
-print(x)
-```
-Ausgabe:
-
-```
-#> 1.2886425256898537
-#> [2.13478064 3.16273766 1.45597637 2.11087885 4.99525416]
-#> [[1.58500759 1.37010454]
-#>  [3.35275472 4.00080577]
-#>  [4.0085369  1.7041659 ]
-#>  [2.36888501 3.1469964 ]
-#>  [3.11263153 3.84857543]]
-```
-
-
-
-### Konstanten
-
-Wir brauchen hier nur für ein paar Übungen die Zahl $\pi$
-
-
-```python
-import numpy as np
-pi_wert = np.pi
-print( pi_wert )
-```
-Ausgabe:
-
-```
-#> 3.141592653589793
-```
-
-
-
-## XXX > Einfache Funktionen
-
-```python
-import numpy as np
-
-# Sinus
-x = np.sin(0)
-print( x )
-
-# Quadrieren
-x = np.square(3)
-print( x )
-
-# PI
-x = np.pi
-print( x )
-
-# Eulersche Zahl
-x = np.e
-print( x )
-
-```
-
-
-
-## Arrays erzeugen 
-
-### 
-
-```python
-v = np.ones(10)
-w = np.zeros(10)
-```
-
-
-
-### `np.arange`()
-
-Mit `np.arange` erzeugen wir automatisch Strukturen, die wir häufiger brauchen. Beschäftigen Sie sich mit den Ausgaben und experimentieren sie etwas, dann wird die jeweilige Funktion recht schnell klar.
-
-```python
-import numpy as np
-
-x = np.arange(1,2,0.1)
-print( x )
-print( x[2] )
-print( len(x) )
-print ( type(x) )
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
--->
-
+         ])</code></pre>
 </div>
 </div>
+<div id="arrays-erzeugen" class="section level2" number="4.6">
+<h2>
+<span class="header-section-number">4.6</span> Arrays erzeugen<a class="anchor" aria-label="anchor" href="#arrays-erzeugen"><i class="fas fa-link"></i></a>
+</h2>
+<p>Bisher mussten wir Array-Werte eintippen. In diesem Abschnitt lernen wir Funktionen kennen, um Arrays mit beliebigem Shape zu erzeugen</p>
+<div id="np.ones-und-np.zeros" class="section level3" number="4.6.1">
+<h3>
+<span class="header-section-number">4.6.1</span> <code>np.ones() und np.zeros()</code><a class="anchor" aria-label="anchor" href="#np.ones-und-np.zeros"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="numpy-arrays.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb56-2"><a href="numpy-arrays.html#cb56-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> np.ones( (<span class="dv">2</span>,<span class="dv">3</span>) )</span>
+<span id="cb56-3"><a href="numpy-arrays.html#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( v )</span></code></pre></div>
+<p>Ausgabe:</p>
+<pre><code>#&gt; [[1. 1. 1.]
+#&gt;  [1. 1. 1.]]</code></pre>
 </div>
-<div class="footnotes footnotes-end-of-document">
-<hr>
-<ol>
-<li id="fn1"><p>sing. Datum<a href="daten.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>siehe z.B. <a href="https://en.wikipedia.org/wiki/Iris_flower_data_set" class="uri">https://en.wikipedia.org/wiki/Iris_flower_data_set</a><a href="daten.html#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>Quelle: <a href="https://medium.com/greyatom/using-clustering-for-feature-engineering-on-the-iris-dataset-f438366d0b4b" class="uri">https://medium.com/greyatom/using-clustering-for-feature-engineering-on-the-iris-dataset-f438366d0b4b</a><a href="daten.html#fnref3" class="footnote-back">↩︎</a></p></li>
-<li id="fn4"><p>Dabei ist noch zu konkretisieren, wie wir die Ähnlichkeit der Werte messen<a href="daten.html#fnref4" class="footnote-back">↩︎</a></p></li>
-<li id="fn5"><p>Es gibt natürlich noch ein paar mehr Arten von Zahlen, die wir aber hier nicht brauchen<a href="daten.html#fnref5" class="footnote-back">↩︎</a></p></li>
-<li id="fn6"><p> <span class="math inline">\((\frac{1}{n} \sum x_i^p)^\frac{1}{p}\)</span><a href="daten.html#fnref6" class="footnote-back">↩︎</a></p></li>
-<li id="fn7"><p>Eine Python-Library umfasst vorgefertigte Programmen, die von Programmieren genutzt werden, um Programme schneller und sicherer zu erstellen. <a href="numpy-arrays.html#fnref7" class="footnote-back">↩︎</a></p></li>
-<li id="fn8"><p>Genaugenommen nur die ersten vier Spalten. Wir lassen die Spalte <code>class</code> weg.<a href="numpy-arrays.html#fnref8" class="footnote-back">↩︎</a></p></li>
-</ol>
+<div id="np.arange" class="section level3" number="4.6.2">
+<h3>
+<span class="header-section-number">4.6.2</span> <code>np.arange</code>()<a class="anchor" aria-label="anchor" href="#np.arange"><i class="fas fa-link"></i></a>
+</h3>
+<p>Mit <code>np.arange</code> erzeugen wir automatisch Vektoren, die wir häufiger brauchen. Beschäftigen Sie sich mit der Ausgabe und experimentieren sie etwas, dann wird die jeweilige Funktion recht schnell klar.</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="numpy-arrays.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb58-2"><a href="numpy-arrays.html#cb58-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">1</span>,<span class="dv">2</span>,<span class="fl">0.1</span>)</span>
+<span id="cb58-3"><a href="numpy-arrays.html#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( x )</span>
+<span id="cb58-4"><a href="numpy-arrays.html#cb58-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( x[<span class="dv">2</span>] )</span>
+<span id="cb58-5"><a href="numpy-arrays.html#cb58-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="bu">len</span>(x) )</span>
+<span id="cb58-6"><a href="numpy-arrays.html#cb58-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> ( <span class="bu">type</span>(x) )</span></code></pre></div>
+<p>Ausgabe:</p>
+<pre><code>#&gt; [1.  1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9]
+#&gt; 1.2000000000000002
+#&gt; 10
+#&gt; &lt;class 'numpy.ndarray'&gt;</code></pre>
+</div>
+<div id="np.linspace" class="section level3" number="4.6.3">
+<h3>
+<span class="header-section-number">4.6.3</span> <code>np.linspace</code>()<a class="anchor" aria-label="anchor" href="#np.linspace"><i class="fas fa-link"></i></a>
+</h3>
+<p>Auch hier ist die Funktionsweise recht offensichtlich.. Sie ist allerdings mit etwas Vorsicht zu genießen…</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="numpy-arrays.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb60-2"><a href="numpy-arrays.html#cb60-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">4</span>)<span class="op">;</span></span>
+<span id="cb60-3"><a href="numpy-arrays.html#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span>
+<span id="cb60-4"><a href="numpy-arrays.html#cb60-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( x.shape )</span></code></pre></div>
+<p>Ausgabe:</p>
+<pre><code>#&gt; [0.         0.33333333 0.66666667 1.        ]
+#&gt; (4,)</code></pre>
+</div>
+</div>
+<div id="operationen-auf-arrays" class="section level2" number="4.7">
+<h2>
+<span class="header-section-number">4.7</span> Operationen auf Arrays<a class="anchor" aria-label="anchor" href="#operationen-auf-arrays"><i class="fas fa-link"></i></a>
+</h2>
+<div id="aggregierende-operationen" class="section level3" number="4.7.1">
+<h3>
+<span class="header-section-number">4.7.1</span> Aggregierende Operationen<a class="anchor" aria-label="anchor" href="#aggregierende-operationen"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="numpy-arrays.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb62-2"><a href="numpy-arrays.html#cb62-2" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>np.array([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>])</span>
+<span id="cb62-3"><a href="numpy-arrays.html#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( x.<span class="bu">min</span>() )</span>
+<span id="cb62-4"><a href="numpy-arrays.html#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( x.<span class="bu">max</span>() )</span>
+<span id="cb62-5"><a href="numpy-arrays.html#cb62-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( x.mean() )</span>
+<span id="cb62-6"><a href="numpy-arrays.html#cb62-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( x.<span class="bu">sum</span>() )</span></code></pre></div>
+<p>Ausgabe:</p>
+<pre><code>#&gt; 1
+#&gt; 4
+#&gt; 2.5
+#&gt; 10</code></pre>
+</div>
+<div id="elementweise-operationen" class="section level3" number="4.7.2">
+<h3>
+<span class="header-section-number">4.7.2</span> Elementweise Operationen<a class="anchor" aria-label="anchor" href="#elementweise-operationen"><i class="fas fa-link"></i></a>
+</h3>
+<p>Nachfolgendes Beispiel zeigt ausgewählte Operationen. Beachten Sie diese Operationen so im Mathe-Unterricht nicht gelernt haben. Sie sind jedoch recht hilfreich!</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="numpy-arrays.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb64-2"><a href="numpy-arrays.html#cb64-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">0</span>])</span>
+<span id="cb64-3"><a href="numpy-arrays.html#cb64-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>])</span>
+<span id="cb64-4"><a href="numpy-arrays.html#cb64-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-5"><a href="numpy-arrays.html#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (x<span class="op">+</span><span class="dv">1</span>)</span>
+<span id="cb64-6"><a href="numpy-arrays.html#cb64-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x<span class="op">*</span>y)</span>
+<span id="cb64-7"><a href="numpy-arrays.html#cb64-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (np.sqrt(x))</span>
+<span id="cb64-8"><a href="numpy-arrays.html#cb64-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (np.sin(x))</span></code></pre></div>
+<p>Ausgabe:</p>
+<pre><code>#&gt; [ 2  5 10  1]
+#&gt; [1 0 9 0]
+#&gt; [1. 2. 3. 0.]
+#&gt; [ 0.84147098 -0.7568025   0.41211849  0.        ]</code></pre>
+</div>
+</div>
+<div id="zufallszahlen" class="section level2" number="4.8">
+<h2>
+<span class="header-section-number">4.8</span> Zufallszahlen<a class="anchor" aria-label="anchor" href="#zufallszahlen"><i class="fas fa-link"></i></a>
+</h2>
+<div id="gleichverteilung" class="section level3" number="4.8.1">
+<h3>
+<span class="header-section-number">4.8.1</span> Gleichverteilung<a class="anchor" aria-label="anchor" href="#gleichverteilung"><i class="fas fa-link"></i></a>
+</h3>
+<p>Nachfolgende Beispiele erzeugen Gleichverteilte Zufallszahlen zwischen 3 und 4.</p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="numpy-arrays.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb66-2"><a href="numpy-arrays.html#cb66-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.uniform(<span class="dv">3</span>,<span class="dv">4</span>)</span>
+<span id="cb66-3"><a href="numpy-arrays.html#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span>
+<span id="cb66-4"><a href="numpy-arrays.html#cb66-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.uniform(<span class="dv">3</span>,<span class="dv">4</span>, size<span class="op">=</span>(<span class="dv">5</span>))</span>
+<span id="cb66-5"><a href="numpy-arrays.html#cb66-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span>
+<span id="cb66-6"><a href="numpy-arrays.html#cb66-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.uniform(<span class="dv">3</span>,<span class="dv">4</span>, size<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">2</span>))</span>
+<span id="cb66-7"><a href="numpy-arrays.html#cb66-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
+<p>Ausgabe:</p>
+<pre><code>#&gt; 3.783905161167521
+#&gt; [3.8399753  3.56915918 3.7709935  3.82623129 3.56073983]
+#&gt; [[3.89111654 3.89581613]
+#&gt;  [3.44582157 3.77181771]
+#&gt;  [3.61537494 3.80976096]
+#&gt;  [3.31854746 3.09067755]
+#&gt;  [3.47984719 3.24337402]]</code></pre>
+</div>
+<div id="normalverteilung" class="section level3" number="4.8.2">
+<h3>
+<span class="header-section-number">4.8.2</span> Normalverteilung<a class="anchor" aria-label="anchor" href="#normalverteilung"><i class="fas fa-link"></i></a>
+</h3>
+<p>Die Kenntnis der Standardnormalverteilung wird vorausgesetzt.</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="numpy-arrays.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb68-2"><a href="numpy-arrays.html#cb68-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.normal()</span>
+<span id="cb68-3"><a href="numpy-arrays.html#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span>
+<span id="cb68-4"><a href="numpy-arrays.html#cb68-4" aria-hidden="true" tabindex="-1"></a>mu <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb68-5"><a href="numpy-arrays.html#cb68-5" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb68-6"><a href="numpy-arrays.html#cb68-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.uniform(mu, sigma, size<span class="op">=</span>(<span class="dv">5</span>))</span>
+<span id="cb68-7"><a href="numpy-arrays.html#cb68-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span>
+<span id="cb68-8"><a href="numpy-arrays.html#cb68-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.uniform(mu, sigma, size<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">2</span>))</span>
+<span id="cb68-9"><a href="numpy-arrays.html#cb68-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
+<p>Ausgabe:</p>
+<pre><code>#&gt; 2.0934775049717267
+#&gt; [1.82295687 4.53346983 2.46545101 4.17860151 4.55891648]
+#&gt; [[4.05783927 2.5767733 ]
+#&gt;  [3.32599427 2.01372293]
+#&gt;  [4.88314694 4.65786727]
+#&gt;  [2.65837146 4.23208262]
+#&gt;  [3.89623513 2.52472445]]</code></pre>
+</div>
+<div id="konstanten" class="section level3" number="4.8.3">
+<h3>
+<span class="header-section-number">4.8.3</span> Konstanten<a class="anchor" aria-label="anchor" href="#konstanten"><i class="fas fa-link"></i></a>
+</h3>
+<p>Wir brauchen hier nur für ein paar Übungen die Zahl <span class="math inline">\(\pi\)</span></p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="numpy-arrays.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb70-2"><a href="numpy-arrays.html#cb70-2" aria-hidden="true" tabindex="-1"></a>pi_wert <span class="op">=</span> np.pi</span>
+<span id="cb70-3"><a href="numpy-arrays.html#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( pi_wert )</span></code></pre></div>
+<p>Ausgabe:</p>
+<pre><code>#&gt; 3.141592653589793</code></pre>
+</div>
+</div>
+<div id="einfache-funktionen" class="section level2" number="4.9">
+<h2>
+<span class="header-section-number">4.9</span> Einfache Funktionen<a class="anchor" aria-label="anchor" href="#einfache-funktionen"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb72"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb72-1"><a href="numpy-arrays.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb72-2"><a href="numpy-arrays.html#cb72-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-3"><a href="numpy-arrays.html#cb72-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Sinus</span></span>
+<span id="cb72-4"><a href="numpy-arrays.html#cb72-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.sin(<span class="dv">0</span>)</span>
+<span id="cb72-5"><a href="numpy-arrays.html#cb72-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( x )</span>
+<span id="cb72-6"><a href="numpy-arrays.html#cb72-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-7"><a href="numpy-arrays.html#cb72-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Quadrieren</span></span>
+<span id="cb72-8"><a href="numpy-arrays.html#cb72-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.square(<span class="dv">3</span>)</span>
+<span id="cb72-9"><a href="numpy-arrays.html#cb72-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( x )</span>
+<span id="cb72-10"><a href="numpy-arrays.html#cb72-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-11"><a href="numpy-arrays.html#cb72-11" aria-hidden="true" tabindex="-1"></a><span class="co"># PI</span></span>
+<span id="cb72-12"><a href="numpy-arrays.html#cb72-12" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.pi</span>
+<span id="cb72-13"><a href="numpy-arrays.html#cb72-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( x )</span>
+<span id="cb72-14"><a href="numpy-arrays.html#cb72-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-15"><a href="numpy-arrays.html#cb72-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Eulersche Zahl</span></span>
+<span id="cb72-16"><a href="numpy-arrays.html#cb72-16" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.e</span>
+<span id="cb72-17"><a href="numpy-arrays.html#cb72-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( x )</span></code></pre></div>
+<p>Ausgabe:</p>
+<pre><code>#&gt; 0.0
+#&gt; 9
+#&gt; 3.141592653589793
+#&gt; 2.718281828459045</code></pre>
+<p>–&gt;</p>
+
+</div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="lineare-algebra.html"><span class="header-section-number">4</span> Lineare Algebra</a></div>
-<div class="empty"></div>
+<div class="prev"><a href="lineare-algebra.html"><span class="header-section-number">3</span> Lineare Algebra</a></div>
+<div class="next"><a href="dataframes.html"><span class="header-section-number">5</span> Dataframes</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#numpy-arrays"><span class="header-section-number">5</span> Numpy-Arrays</a></li>
-<li><a class="nav-link" href="#wof%C3%BCr-brauchen-wir-numpy"><span class="header-section-number">5.1</span> Wofür brauchen wir Numpy?</a></li>
-<li><a class="nav-link" href="#numpy-arrays-1"><span class="header-section-number">5.2</span> Numpy-Arrays</a></li>
+<li><a class="nav-link" href="#numpy-arrays"><span class="header-section-number">4</span> Numpy-Arrays</a></li>
+<li><a class="nav-link" href="#wof%C3%BCr-brauchen-wir-numpy"><span class="header-section-number">4.1</span> Wofür brauchen wir Numpy?</a></li>
+<li><a class="nav-link" href="#numpy-arrays-1"><span class="header-section-number">4.2</span> Numpy-Arrays</a></li>
 <li>
-<a class="nav-link" href="#vektor-mit-numpy"><span class="header-section-number">5.3</span> Vektor mit Numpy</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#beispiel"><span class="header-section-number">5.3.1</span> Beispiel</a></li>
-<li><a class="nav-link" href="#shape-dimension"><span class="header-section-number">5.3.2</span> Shape (Dimension)</a></li>
-<li><a class="nav-link" href="#zugriff-auf-elemente"><span class="header-section-number">5.3.3</span> Zugriff auf Elemente</a></li>
-<li><a class="nav-link" href="#werte-ver%C3%A4ndern"><span class="header-section-number">5.3.4</span> Werte verändern</a></li>
-<li><a class="nav-link" href="#skalare-multiplikation-und-addition"><span class="header-section-number">5.3.5</span> Skalare Multiplikation und Addition</a></li>
-<li><a class="nav-link" href="#neue-rechenarten"><span class="header-section-number">5.3.6</span> Neue Rechenarten</a></li>
+<a class="nav-link" href="#vektor-mit-numpy"><span class="header-section-number">4.3</span> Vektor mit Numpy</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#beispiel"><span class="header-section-number">4.3.1</span> Beispiel</a></li>
+<li><a class="nav-link" href="#shape-dimension"><span class="header-section-number">4.3.2</span> Shape (Dimension)</a></li>
+<li><a class="nav-link" href="#zugriff-auf-elemente"><span class="header-section-number">4.3.3</span> Zugriff auf Elemente</a></li>
+<li><a class="nav-link" href="#werte-ver%C3%A4ndern"><span class="header-section-number">4.3.4</span> Werte verändern</a></li>
+<li><a class="nav-link" href="#skalare-multiplikation-und-addition"><span class="header-section-number">4.3.5</span> Skalare Multiplikation und Addition</a></li>
+<li><a class="nav-link" href="#neue-rechenarten"><span class="header-section-number">4.3.6</span> Neue Rechenarten</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#matrix-mit-numpy"><span class="header-section-number">5.4</span> Matrix mit Numpy</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#beispiel-1"><span class="header-section-number">5.4.1</span> Beispiel</a></li>
-<li><a class="nav-link" href="#shape-dimension-1"><span class="header-section-number">5.4.2</span> Shape (Dimension)</a></li>
-<li><a class="nav-link" href="#skalare-multiplikation-und-addition-1"><span class="header-section-number">5.4.3</span> Skalare Multiplikation und Addition</a></li>
-<li><a class="nav-link" href="#matrixmultiplikation"><span class="header-section-number">5.4.4</span> Matrixmultiplikation</a></li>
-<li><a class="nav-link" href="#%C3%BCbungen-2"><span class="header-section-number">5.4.5</span> Übungen</a></li>
+<a class="nav-link" href="#matrix-mit-numpy"><span class="header-section-number">4.4</span> Matrix mit Numpy</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#beispiel-1"><span class="header-section-number">4.4.1</span> Beispiel</a></li>
+<li><a class="nav-link" href="#shape-dimension-1"><span class="header-section-number">4.4.2</span> Shape (Dimension)</a></li>
+<li><a class="nav-link" href="#skalare-multiplikation-und-addition-1"><span class="header-section-number">4.4.3</span> Skalare Multiplikation und Addition</a></li>
+<li><a class="nav-link" href="#matrixmultiplikation"><span class="header-section-number">4.4.4</span> Matrixmultiplikation</a></li>
+<li><a class="nav-link" href="#%C3%BCbungen-2"><span class="header-section-number">4.4.5</span> Übungen</a></li>
 </ul>
 </li>
+<li><a class="nav-link" href="#allgemeine-numpy-arrays"><span class="header-section-number">4.5</span> Allgemeine Numpy-Arrays</a></li>
+<li>
+<a class="nav-link" href="#arrays-erzeugen"><span class="header-section-number">4.6</span> Arrays erzeugen</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#np.ones-und-np.zeros"><span class="header-section-number">4.6.1</span> np.ones() und np.zeros()</a></li>
+<li><a class="nav-link" href="#np.arange"><span class="header-section-number">4.6.2</span> np.arange()</a></li>
+<li><a class="nav-link" href="#np.linspace"><span class="header-section-number">4.6.3</span> np.linspace()</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#operationen-auf-arrays"><span class="header-section-number">4.7</span> Operationen auf Arrays</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#aggregierende-operationen"><span class="header-section-number">4.7.1</span> Aggregierende Operationen</a></li>
+<li><a class="nav-link" href="#elementweise-operationen"><span class="header-section-number">4.7.2</span> Elementweise Operationen</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#zufallszahlen"><span class="header-section-number">4.8</span> Zufallszahlen</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#gleichverteilung"><span class="header-section-number">4.8.1</span> Gleichverteilung</a></li>
+<li><a class="nav-link" href="#normalverteilung"><span class="header-section-number">4.8.2</span> Normalverteilung</a></li>
+<li><a class="nav-link" href="#konstanten"><span class="header-section-number">4.8.3</span> Konstanten</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#einfache-funktionen"><span class="header-section-number">4.9</span> Einfache Funktionen</a></li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-          
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/04-numpy.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/04-numpy.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -611,7 +539,7 @@ print ( type(x) )
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Data Science &amp; Machine Learning</strong>" was written by Dieter Greipl. It was last built on 2022-03-14.</p>
+    <p>"<strong>Data Science &amp; Machine Learning</strong>" was written by Dieter Greipl. It was last built on 2022-03-21.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
