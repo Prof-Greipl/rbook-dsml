@@ -31,7 +31,7 @@ skalarprodukt-1
 matrixprodukt-1
 matrixprodukt-2
 matrixprodukt-3
-symmetriebetrachtung
+matrixprodukt-4
 numpy-arrays
 wofür-brauchen-wir-numpy
 numpy-arrays-1
